@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Cairo";
+  font-display: swap;
+  src: local("Cairo"), url(/fonts/Cairo-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Cairo-bold";
+  font-display: swap;
+  src: local("Cairo"), url(/fonts/Cairo-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Cairo-semi";
+  font-display: swap;
+  src: local("Cairo"), url(/fonts/Cairo-SemiBold.ttf) format("truetype");
+}
+
+main {
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  text-align: justify;
+}
+/* Selection */
+::-moz-selection {
+  color: #0f182e;
+  background: #fdb035;
+}
+::selection {
+  color: #0f182e;
+  background: #fdb035;
+}
+.fullheight {
+  height: 100%;
+}
+.fullwidth {
+  width: 100%;
+}
+/* Centerlizing */
+.center {
+  text-align: center;
+  text-align: -webkit-center;
+}
+.position__centerlize {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/*
+* Flex
+*/
+.flex__centerlize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+}
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-justify-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.grow1 {
+  flex-grow: 1;
+}
+
+.draggble-item {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
+  /* overflow: hidden; */
+}
+.mid-sec {
+  padding: 1rem;
+  background: #ffffff29;
+  width: 95%;
+  height: 100%;
+  max-width: 1080px;
+  max-height: 80%;
+}
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+/* Shadows */
+.shadow1 {
+  box-shadow: 0 0 10px #eeeeee;
+}

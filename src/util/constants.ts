@@ -1,2 +1,1 @@
-export const BASEURL =
-  process.env.NODE_ENV === "production" ? "https://aldabil.me" : "";
+export const BASEURL = process.env.BASE_URL;

@@ -36,7 +36,7 @@ export const getMenuIcons = (size: number): IconProps[] => {
     },
     {
       title: "Github",
-      href: "https:github.com/aldabil21",
+      href: "https://github.com/aldabil21",
       icon: <GitHubIcon style={iconStyle} />,
       color: "#222222",
       external: true,

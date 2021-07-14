@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import BottomNav from "./BottomNav";
 import { WithMediaQuery, WithMediaQueryProps } from "../hoc/WithMediaQuery";
 import { useRouter } from "next/router";
+import { isBrowser } from "../../util/helpers";
 
 interface LayoutProps extends WithMediaQueryProps {
   children: JSX.Element;
@@ -16,7 +17,7 @@ const Main = styled.main(({ isMobile }: { isMobile: boolean }) => ({
   marginBottom: isMobile ? "3rem" : "",
 }));
 
-const Layout = ({ children, mdDown, isMobile }: LayoutProps) => {
+const Layout = ({ children, isMobile, mdUp }: LayoutProps) => {
   const [open, setOpen] = useState(false);
   const { pathname, push } = useRouter();
   const bottomSpace = isMobile && pathname !== "/";
@@ -31,7 +32,7 @@ const Layout = ({ children, mdDown, isMobile }: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SideDrawer
-        open={!mdDown || open}
+        open={mdUp || open}
         toggleDrawer={toggleDrawer}
         isMobile={isMobile}
       >

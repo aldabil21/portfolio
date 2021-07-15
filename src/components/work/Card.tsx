@@ -14,19 +14,21 @@ const CardInner = styled.div(() => ({
   borderRadius: 3,
   overflow: "hidden",
 }));
-const CardHeader = styled.header(({ bg }: { bg: string }) => ({
-  background: `url(${bg})`,
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  minHeight: 320,
-  backgroundPosition: "right",
-  boxShadow: "0 0 15px #cccccc",
-  transition: "all 200ms ease-in",
-  cursor: "move",
-  "&:hover": {
-    opacity: 0.7,
-  },
-}));
+const CardHeader = styled.header(
+  ({ bg, bgPos }: { bg: string; bgPos: string }) => ({
+    background: `url(${bg})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    minHeight: 320,
+    backgroundPosition: bgPos,
+    boxShadow: "0 0 15px #cccccc",
+    transition: "all 200ms ease-in",
+    cursor: "move",
+    "&:hover": {
+      opacity: 0.7,
+    },
+  })
+);
 interface WorkingCardProps {
   card: WorkCard;
 }
@@ -36,7 +38,7 @@ const WorkingCard = ({ card }: WorkingCardProps) => {
   return (
     <CardWrapper theme={theme}>
       <CardInner>
-        <CardHeader bg={card.bg}>
+        <CardHeader bg={card.bg} bgPos={card.bgPosition}>
           {card.faved && <StarRoundedIcon color="warning" fontSize="large" />}
         </CardHeader>
         <Typography

@@ -13,6 +13,7 @@ import { useDomElResize } from "../../hooks/useDomResize";
 import { IconProps } from "./icons";
 import { useRouter } from "next/router";
 import { useTheme } from "@material-ui/core";
+import { isBrowser } from "../../util/helpers";
 
 interface IconWrapperProps {
   icons: IconProps[];
@@ -27,6 +28,7 @@ const IconWrapper = ({ icons, perRow, iconWidth }: IconWrapperProps) => {
   const clickTime = useRef(Date.now());
   const [enabled, setEnabled] = useState(true);
   const [canExternal, setCanExternal] = useState(true);
+  const [mounted, setMounted] = useState(false);
   const section = useDomElResize("icon_wrapper");
   const [springs, api] = useSprings(
     icons.length,
@@ -159,6 +161,10 @@ const IconWrapper = ({ icons, perRow, iconWidth }: IconWrapperProps) => {
       })
     );
   }, [section, api, iconWidth, perRow]);
+  // useEffect(() => {
+  //   console.log("MOUNTED");
+  //   setMounted(true);
+  // }, []);
 
   return (
     <div className="fullheight" ref={wrapper}>

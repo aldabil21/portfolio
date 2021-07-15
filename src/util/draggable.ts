@@ -31,9 +31,8 @@ export const getDraggedArgs =
     const hpadding = ((bounds?.width || 0) - iconWidth * perRow) / (perRow - 1);
     const rows = Math.ceil(order.length / perRow);
     const vpadding = ((bounds?.height || 0) - iconWidth * rows) / rows;
-    const _x = col * (iconWidth + hpadding);
-    const _y = row * (iconWidth + vpadding + 5);
-
+    const _x = col * Math.abs(iconWidth + hpadding);
+    const _y = row * Math.abs(iconWidth + vpadding + 5);
     return active && index === originalIdx
       ? {
           x: activeCol * (iconWidth + hpadding) + x,

@@ -27,6 +27,7 @@ const BottomNav = ({ open, toHome, toggleDrawer }: BottomNavProps) => {
           right: 0,
           backgroundColor: "transparent",
           backdropFilter: "blur(5px)",
+          zIndex: 99,
         }}
         elevation={3}
       >

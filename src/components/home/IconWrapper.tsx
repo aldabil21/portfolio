@@ -96,7 +96,7 @@ const IconWrapper = ({ icons, perRow, iconWidth }: IconWrapperProps) => {
         event.stopPropagation();
         const clickDeltaTime = Date.now() - clickTime.current;
         const { href } = icons[i];
-        if (dragDeltaTime.current < 100 && clickDeltaTime >= 200) {
+        if (dragDeltaTime.current <= 200 && clickDeltaTime >= 200) {
           clickTime.current = Date.now();
           // Don't implement zoom-in if t's an external link icon
           if (!icons[i].external && !icons[i].soon) {
@@ -121,7 +121,7 @@ const IconWrapper = ({ icons, perRow, iconWidth }: IconWrapperProps) => {
         }
       },
       onDragEnd: () => {
-        if (dragDeltaTime.current <= 100) {
+        if (dragDeltaTime.current <= 200) {
           setCanExternal(true);
         }
       },

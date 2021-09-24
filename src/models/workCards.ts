@@ -12,7 +12,18 @@ export interface WorkCard {
 export const workCards: Record<string, WorkCard[]> = {
   en: [
     {
-      id: 1,
+      id: 2,
+      title: "Future Pack E-commerce & Quotation System",
+      description:
+        "E-commerce platform for a packaging & printing company in Saudi Arabia. The main request of the company for this website is to have the ability to make a complicated & flexible pricing for each product item, also ability to request quotation with custom requirements for the same product. SEO efforts were taking care of nicely in this project, such as product carousels snippets and other JSON+ld scripts.",
+      tags: "E-commerce, SEO, Web-service, Full-stack, Next",
+      site: "https://future-pack.com",
+      faved: true,
+      bg: "/images/work/future-pack.jpg",
+      bgPosition: "right",
+    },
+    {
+      id: 2,
       title: "Bayader Aljazeera E-commerce & Quotation System",
       description:
         "Custom developed e-commerce platform for a packaging & printing company in Saudi Arabia. The company used to issue quotations to their clients manually by calculating the specification of each package, which was tedius and error prone. So an automated system was developed to calculate & issue quotations to clients automatically with accurate pricing. The system also includes an appointment/calendar system for the company employees to arrange for thier client visits and tracking, as well as a job order tracking system to track each order between sales, package designers, package production and management.",
@@ -23,7 +34,7 @@ export const workCards: Record<string, WorkCard[]> = {
       bgPosition: "right",
     },
     {
-      id: 2,
+      id: 3,
       title: "Unayzah.com e-commerce web & mobile app",
       description:
         "E-commerce website using opencart with custom developed functionality to allow sellers to open stores and have their own sales dashboard. Also developed a mobile app using Flutter and pubilshed successfully to the app store.",
@@ -34,7 +45,7 @@ export const workCards: Record<string, WorkCard[]> = {
       faved: true,
     },
     {
-      id: 3,
+      id: 4,
       title: "React Scheduler Component",
       description:
         "Simplified Scheduler componenet for React, easy to use & customize, more light/simplified than other react scheduler libs out there. I created this for one of my projects that used calendar/event system, I check some of the most famous components out there and thought that It doesn't fit my use case and I needed my own implementations to fit more perfectly in the current project.",
@@ -45,7 +56,7 @@ export const workCards: Record<string, WorkCard[]> = {
       faved: true,
     },
     {
-      id: 4,
+      id: 5,
       title: "Wakaed for IT website",
       description:
         "A porfolio for Wakaed IT company, I used be working here for a short period of time as I was transitioning for one city to another. This is made with mostly a plain vanilla JS, no modren JS lib been used",
@@ -55,7 +66,7 @@ export const workCards: Record<string, WorkCard[]> = {
       bgPosition: "left",
     },
     {
-      id: 5,
+      id: 6,
       title: "Puhua International Hostpital",
       description:
         "Wordpress website for an international hospital in Beijing. Nothing so special about it quite frankly, I used to work here fulltime in IT dept. Where I also helped in website dev & management and some e-marketing stuff.",

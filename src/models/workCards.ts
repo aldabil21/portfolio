@@ -12,6 +12,17 @@ export interface WorkCard {
 export const workCards: Record<string, WorkCard[]> = {
   en: [
     {
+      id: 21,
+      title: "Fullstack Featured-Packed E-commerce Store",
+      description:
+        "European Honey folks wanted somthing special, unique to thier needs, this fully featured ~2 seconds load-time E-commerce store have a lot of features that will help them succeed in their launch, including, complex taxonomy system (categories, filters, tags, brands, attributes, features), highly flexible options with all teaks needed (input, selects, files, numbers, texts.. each has own sub-options, visibility conditions, pricing conditions, dynamic pricing, quantity tracking), group based prices (retail, wholesale you name it), specials, coupons, points, notificatins, manegment, order tracking, scheduling, shipping, payment gateway, and much more features. Not to mention the SEO aspect of work, ls+json rich snippets, with little bit of marketing work, they gonna rock it, hope they do.",
+      tags: "Fullstack, E-commerce, Node, MySQL, Redis, VPS, Next",
+      site: "https://europeanhoney.com",
+      faved: true,
+      bg: "/images/work/european-honey.jpg",
+      bgPosition: "left",
+    },
+    {
       id: 1,
       title: "Push Notification & PWA for OpenCart 3.x",
       description:

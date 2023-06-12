@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "extends": ["next", "next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
+  "ignorePatterns": [
+    "next.config.js",
+    "tailwind.config.js",
+    "jest.config.js",
+    "jest.setup.js",
+    "coverage"
+  ],
+  "plugins": ["testing-library"],
+  "overrides": [
+    // Only uses Testing Library lint rules in test files
+    {
+      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
+  "rules": {
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "whitelabel",
+  "short_name": "whitelabel",
+  "description": "",
+  "icons": [],
+  "theme_color": "#CC0816",
+  "background_color": "#CC0816",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

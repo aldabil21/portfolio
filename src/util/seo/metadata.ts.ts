@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { getTranslation } from '@/i18n';
 import { languages } from '@/i18n/settings';
-import tailwindConfig from '../../../tailwind.config';
 import { hrefLangAlternates } from './alternates';
 
 export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
@@ -37,9 +36,7 @@ export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
       icon: '/favicon.ico',
     },
     manifest: '/manifest.json',
-    themeColor: (
-      tailwindConfig?.theme?.extend?.colors as unknown as { primary: { DEFAULT: string } }
-    ).primary.DEFAULT,
+    themeColor: '#CC0816',
     alternates: {
       languages: hrefLangAlternates(),
     },

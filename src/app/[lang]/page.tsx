@@ -1,3 +1,4 @@
+import ThemeSwitcher from '@/components/common/ThemeSwitcher';
 import { getTranslation } from '@/i18n';
 
 const Page: NextPage = async ({ params: { lang } }) => {
@@ -6,7 +7,8 @@ const Page: NextPage = async ({ params: { lang } }) => {
   return (
     <>
       <main>
-        <h1>{t('title')}</h1>
+        <h1 className='text-primary'>{t('title')}</h1>
+        <ThemeSwitcher />
       </main>
     </>
   );

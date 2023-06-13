@@ -37,7 +37,9 @@ export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
       icon: '/favicon.ico',
     },
     manifest: '/manifest.json',
-    themeColor: tailwindConfig.theme.extend.colors.primary.DEFAULT,
+    themeColor: (
+      tailwindConfig?.theme?.extend?.colors as unknown as { primary: { DEFAULT: string } }
+    ).primary.DEFAULT,
     alternates: {
       languages: hrefLangAlternates(),
     },

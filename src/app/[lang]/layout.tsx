@@ -4,6 +4,7 @@ import { languages } from '@/i18n/settings';
 import { homeMetadata } from '@/util/seo/metadata.ts';
 import { cairoFont } from '@/util/fonts';
 import { globalJsonLd } from '@/util/seo/jsonLd';
+import { cookies } from 'next/headers';
 import '@/styles/globals.css';
 
 export const generateMetadata = ({ params }: NextPageProps): Promise<Metadata> => {
@@ -15,8 +16,10 @@ export const generateStaticParams = () => {
 };
 
 const LangRootLayout: NextLayout<{ auth: React.ReactNode }> = ({ children, params: { lang } }) => {
+  const cookiesList = cookies();
+
   return (
-    <html lang={lang} dir={dir(lang)}>
+    <html lang={lang} dir={dir(lang)} className={cookiesList.get('theme')?.value || 'dark'}>
       <head>
         {/* Global JSON-LD */}
         <script

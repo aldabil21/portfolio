@@ -19,7 +19,19 @@ export function middleware(req: NextRequest) {
     req.nextUrl.pathname.includes('/api/') ||
     PUBLIC_FILE.test(req.nextUrl.pathname)
   ) {
-    return NextResponse.next();
+    return;
+  }
+
+  const response = NextResponse.next();
+
+  // Setting preferred theme if not set
+  if (!req.cookies.has('theme')) {
+    const theme = req.headers.get('sec-ch-prefers-color-scheme') || 'dark';
+    response.cookies.set({
+      name: 'theme',
+      value: theme,
+      expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+    });
   }
 
   // Redirect if locale in path is not supported
@@ -40,5 +52,5 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL(`/${locale}/${pathname}${search}`, req.url));
   }
 
-  return NextResponse.next();
+  return response;
 }

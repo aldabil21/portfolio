@@ -9,14 +9,14 @@ export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
   return {
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || ''),
     title: {
-      template: `%s | ${t('seo.title')}`,
+      template: `%s | ${t('title')}`,
       default: t('seo.title').toString(),
     },
     description: t('seo.description'),
     robots: process.env.NEXT_PUBLIC_ENV !== 'production' ? 'noindex, nofollow' : undefined,
     twitter: {
       card: 'summary_large_image',
-      site: '@whitelabel',
+      site: '@aldabil21',
     },
     openGraph: {
       siteName: t('seo.title').toString(),
@@ -36,7 +36,7 @@ export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
       icon: '/favicon.ico',
     },
     manifest: '/manifest.json',
-    themeColor: '#CC0816',
+    themeColor: '#000112',
     alternates: {
       languages: hrefLangAlternates(),
     },

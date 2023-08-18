@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
+import { cookies } from 'next/headers';
 import { dir } from 'i18next';
 import { languages } from '@/i18n/settings';
 import { homeMetadata } from '@/util/seo/metadata.ts';
 import { cairoFont } from '@/util/fonts';
 import { globalJsonLd } from '@/util/seo/jsonLd';
-import { cookies } from 'next/headers';
+import Layout from '@/components/layout';
 import '@/styles/globals.css';
 
 export const generateMetadata = ({ params }: NextPageProps): Promise<Metadata> => {
@@ -27,9 +28,9 @@ const LangRootLayout: NextLayout<{ auth: React.ReactNode }> = ({ children, param
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalJsonLd) }}
         />
       </head>
-      <body className={`${cairoFont.variable} bg-body font-cairo`}>
+      <body className={`${cairoFont.variable} bg-body font-cairo text-text`}>
         {/* Page */}
-        {children}
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

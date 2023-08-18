@@ -1,6 +1,6 @@
 export const languages: Languages[] = ['en', 'ar'];
 export const fallbackLng = languages[0];
-export const namespaces = ['common'] as const;
+export const namespaces = ['common', 'home'] as const;
 export const defaultNS = namespaces[0];
 
 export function getOptions(

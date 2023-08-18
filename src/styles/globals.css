@@ -5,21 +5,69 @@
 /* Base */
 @layer base {
   :root {
+    --color-body: 255 255 255;
+
     --color-primary: 204 8 22;
     --color-primary-light: 239 13 29;
     --color-primary-dark: 194 13 25;
     --color-primary-contrast: 255 255 255;
 
-    --color-body: 255 255 255;
+    --color-secondary: 204 8 22;
+    --color-secondary-light: 239 13 29;
+    --color-secondary-dark: 194 13 25;
+    --color-secondary-contrast: 255 255 255;
+
+    --color-tertiary: 204 8 22;
+    --color-tertiary-light: 239 13 29;
+    --color-tertiary-dark: 194 13 25;
+    --color-tertiary-contrast: 255 255 255;
+
+    --color-error: 204 8 22;
+    --color-error-light: 239 13 29;
+    --color-error-dark: 194 13 25;
+    --color-error-contrast: 255 255 255;
+
+    --color-success: 204 8 22;
+    --color-success-light: 239 13 29;
+    --color-success-dark: 194 13 25;
+    --color-success-contrast: 255 255 255;
+
+    --color-text: 0 0 18;
+    --color-text-light: 7 7 20;
+    --color-text-dark: 5 5 25;
   }
 
   :root[class~='dark'] {
-    --color-primary: 195 168 69;
-    --color-primary-light: 205 176 70;
-    --color-primary-dark: 165 140 51;
-    --color-primary-contrast: 8 8 8;
+    --color-body: 0 1 18;
 
-    --color-body: 0 0 0;
+    --color-primary: 0 2 31;
+    --color-primary-light: 24 27 53;
+    --color-primary-dark: 0 2 25;
+    --color-primary-contrast: 230 230 233;
+
+    --color-secondary: 204 8 22;
+    --color-secondary-light: 239 13 29;
+    --color-secondary-dark: 194 13 25;
+    --color-secondary-contrast: 255 255 255;
+
+    --color-tertiary: 204 8 22;
+    --color-tertiary-light: 239 13 29;
+    --color-tertiary-dark: 194 13 25;
+    --color-tertiary-contrast: 255 255 255;
+
+    --color-error: 204 8 22;
+    --color-error-light: 239 13 29;
+    --color-error-dark: 194 13 25;
+    --color-error-contrast: 255 255 255;
+
+    --color-success: 204 8 22;
+    --color-success-light: 239 13 29;
+    --color-success-dark: 194 13 25;
+    --color-success-contrast: 255 255 255;
+
+    --color-text: 230 230 230;
+    --color-text-light: 255 255 255;
+    --color-text-dark: 204 204 204;
   }
 
   h1 {
@@ -37,7 +85,6 @@
   h5 {
     @apply text-lg font-bold;
   }
-
   h6 {
     @apply font-bold;
   }
@@ -45,7 +92,7 @@
 
 /** Defaults */
 body {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
 }

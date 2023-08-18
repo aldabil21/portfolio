@@ -1,16 +1,11 @@
-import ThemeSwitcher from '@/components/common/ThemeSwitcher';
-import { getTranslation } from '@/i18n';
+import { Fragment } from 'react';
+import HomeBanner from '@/components/home/Banner';
 
 const Page: NextPage = async ({ params: { lang } }) => {
-  const { t } = await getTranslation(lang);
-
   return (
-    <>
-      <main>
-        <h1 className='text-primary'>{t('title')}</h1>
-        <ThemeSwitcher />
-      </main>
-    </>
+    <Fragment>
+      <HomeBanner lang={lang} />
+    </Fragment>
   );
 };
 

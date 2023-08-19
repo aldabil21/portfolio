@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ChevronIcon from '../svgs/chevron';
 import { useTranslation } from '@/i18n/client';
+import Button from '../button/Button';
+import { scrollIntoElementId } from '@/util/scrollIntoView';
 
 type Props = {
   lang: Languages;
@@ -73,13 +75,31 @@ const HomeBanner = ({ lang }: Props) => {
         </div>
         <div className='grow space-y-8 px-6 pb-10 pt-6 md:pt-12'>
           <Reveal lang={lang} direction='left' className='flex items-center gap-2' delay={0.4}>
-            <ChevronIcon className='rtl:rotate-180' />
-            <p className='text-xl'>{t('home:about_me')}</p>
+            <Button
+              theme='white'
+              shape='text'
+              className='px-0'
+              onClick={() => {
+                scrollIntoElementId('about');
+              }}
+            >
+              <ChevronIcon className='rtl:rotate-180' />
+              <p className='px-4 text-xl'>{t('home:about_me')}</p>
+            </Button>
           </Reveal>
 
           <Reveal lang={lang} direction='left' className='flex items-center gap-2' delay={0.5}>
-            <ChevronIcon className='rtl:rotate-180' />
-            <p className='text-xl'>{t('home:recent_projects')}</p>
+            <Button
+              theme='white'
+              shape='text'
+              className='px-0'
+              onClick={() => {
+                scrollIntoElementId('projects');
+              }}
+            >
+              <ChevronIcon className='rtl:rotate-180' />
+              <p className='px-4 text-xl'>{t('home:recent_projects')}</p>
+            </Button>
           </Reveal>
         </div>
 

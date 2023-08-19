@@ -7,14 +7,14 @@
   :root {
     --color-body: 255 255 255;
 
-    --color-primary: 204 8 22;
-    --color-primary-light: 239 13 29;
-    --color-primary-dark: 194 13 25;
+    --color-primary: 114 0 74;
+    --color-primary-light: 130 0 84;
+    --color-primary-dark: 65 0 42;
     --color-primary-contrast: 255 255 255;
 
-    --color-secondary: 204 8 22;
-    --color-secondary-light: 239 13 29;
-    --color-secondary-dark: 194 13 25;
+    --color-secondary: 18 99 148;
+    --color-secondary-light: 22 124 185;
+    --color-secondary-dark: 13 74 111;
     --color-secondary-contrast: 255 255 255;
 
     --color-tertiary: 204 8 22;
@@ -40,14 +40,14 @@
   :root[class~='dark'] {
     --color-body: 0 1 18;
 
-    --color-primary: 0 2 31;
-    --color-primary-light: 24 27 53;
-    --color-primary-dark: 0 2 25;
-    --color-primary-contrast: 230 230 233;
+    --color-primary: 202 34 142;
+    --color-primary-light: 213 78 165;
+    --color-primary-dark: 162 27 114;
+    --color-primary-contrast: 255 255 255;
 
-    --color-secondary: 204 8 22;
-    --color-secondary-light: 239 13 29;
-    --color-secondary-dark: 194 13 25;
+    --color-secondary: 18 99 148;
+    --color-secondary-light: 22 124 185;
+    --color-secondary-dark: 13 74 111;
     --color-secondary-contrast: 255 255 255;
 
     --color-tertiary: 204 8 22;

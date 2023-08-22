@@ -1,0 +1,142 @@
+'use client';
+import { useState } from 'react';
+import Section from '../common/Section';
+import Image from 'next/image';
+import { motion, useMotionValue } from 'framer-motion';
+import { useTranslation } from '@/i18n/client';
+import Reveal from '../animation/Reveal';
+
+type Props = {
+  lang: Languages;
+};
+
+const DUMMY = [
+  {
+    id: 1,
+    title: 'Project name',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
+    technologies: ['React', 'Next.js', 'Tailwind CSS'],
+    image: '/images/frmf/1.png',
+  },
+  {
+    id: 2,
+    title: 'Project name',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
+    technologies: ['React', 'Next.js', 'Tailwind CSS'],
+    image: '/images/ertiqa/1.png',
+  },
+  {
+    id: 3,
+    title: 'Project name',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
+    technologies: ['React', 'Next.js', 'Tailwind CSS'],
+    image: '/images/frmf/1.png',
+  },
+  {
+    id: 4,
+    title: 'Project name',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
+    technologies: ['React', 'Next.js', 'Tailwind CSS'],
+    image: '/images/ertiqa/1.png',
+  },
+  {
+    id: 5,
+    title: 'Project name',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
+    technologies: ['React', 'Next.js', 'Tailwind CSS'],
+    image: '/images/frmf/1.png',
+  },
+  {
+    id: 6,
+    title: 'Project name',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
+    technologies: ['React', 'Next.js', 'Tailwind CSS'],
+    image: '/images/ertiqa/1.png',
+  },
+];
+
+const Projects = ({ lang }: Props) => {
+  const { t } = useTranslation(lang, 'home');
+  const [inView, setInView] = useState(0);
+  const rotateY = useMotionValue(0);
+  const right = useMotionValue('0%');
+  const ROTATE = lang === 'ar' ? -30 : 30;
+
+  return (
+    <Section id='projects' className='py-12'>
+      <h2 className='text-center'>{t('home:recent_projects')}</h2>
+      <div className='relative'>
+        <div className='sticky top-10 hidden w-full lg:block'>
+          <motion.div
+            layout
+            layoutId='image'
+            className='absolute overflow-x-hidden transition-all duration-500'
+            transition={{ type: 'spring', delay: 2 }}
+            style={{ rotateY, right }}
+            transformTemplate={(_, transform) => `perspective(2000px) ${transform}`}
+          >
+            <div className='relative h-[700px] w-[100%] max-w-[800px] overflow-hidden'>
+              <Image
+                src='/images/frame.png'
+                alt=''
+                width={800}
+                height={800}
+                className='relative z-10'
+              />
+              <Image
+                src={DUMMY[inView].image}
+                alt={DUMMY[inView].title}
+                fill
+                sizes='(max-width: 1024px) 100vw, 800px'
+                className='mx-auto h-full max-h-[70%] max-w-[94%] overflow-y-auto object-cover'
+              />
+            </div>
+          </motion.div>
+        </div>
+        {DUMMY.map((project, i) => (
+          <div
+            key={project.id}
+            className={`flex flex-col items-center gap-6
+          ${i % 2 > 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
+          >
+            <Reveal
+              direction='bottom'
+              lang={lang}
+              className='flex-1 space-y-2 py-52'
+              once={false}
+              onViewportEnter={() => {
+                setInView(i);
+                rotateY.set(i % 2 === 0 ? -ROTATE : ROTATE);
+                if (lang === 'ar') {
+                  right.set(i % 2 === 0 ? '50%' : '0%');
+                } else {
+                  right.set(i % 2 === 0 ? '0%' : '50%');
+                }
+              }}
+              threshold={0.8}
+            >
+              <h3 className='text-xl font-semibold'>{project.title}</h3>
+              <p className='text-lg'>{project.description}</p>
+              <div className='flex flex-wrap justify-center gap-4'>
+                {project.technologies.map((tech) => (
+                  <span key={tech} className='rounded-sm bg-secondary/20 px-4 py-1 text-sm'>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
+            <div className='hidden flex-1 lg:block'></div>
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
+};
+
+export default Projects;

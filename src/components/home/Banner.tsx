@@ -39,7 +39,13 @@ const HomeBanner = ({ lang }: Props) => {
           <Reveal lang={lang} direction='bottom' as='h2'>
             {t('home:hello')}
           </Reveal>
-          <Reveal lang={lang} direction='bottom' as='h1' className='text-6xl' delay={0.1}>
+          <Reveal
+            lang={lang}
+            direction='bottom'
+            as='h1'
+            className='text-4xl md:text-6xl'
+            delay={0.1}
+          >
             {t('home:abdulraoof')}
           </Reveal>
           <Reveal lang={lang} direction='bottom' as='p' className='relative text-2xl' delay={0.2}>

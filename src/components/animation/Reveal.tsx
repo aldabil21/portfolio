@@ -1,6 +1,6 @@
 'use client';
 import { useMemo } from 'react';
-import { motion, AnimationProps } from 'framer-motion';
+import { motion, AnimationProps, MotionProps } from 'framer-motion';
 
 type Props = {
   lang: string;
@@ -21,7 +21,7 @@ type Props = {
   once?: boolean;
   as?: keyof typeof motion;
   className?: string;
-};
+} & MotionProps;
 
 const Reveal = ({
   lang,
@@ -35,6 +35,7 @@ const Reveal = ({
   once = true,
   className,
   as = 'div',
+  ...props
 }: Props) => {
   const Component = motion[as];
 
@@ -73,6 +74,7 @@ const Reveal = ({
         },
       }}
       viewport={{ once, amount: threshold }}
+      {...props}
     >
       {children}
     </Component>

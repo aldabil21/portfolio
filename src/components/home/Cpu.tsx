@@ -15,8 +15,8 @@ const MOTION_LINE_CONFIG: AnimationProps = {
 
 const Cpu = () => {
   return (
-    <div className='relative mx-auto max-w-xl px-4 py-12 text-primary drop-shadow-2xl'>
-      <div className='absolute inset-1/2 -z-10 h-20 w-20 -translate-x-1/2 -translate-y-1/2 bg-transparent shadow-[0_0_150px_10px] shadow-primary/70 md:h-32 md:w-32' />
+    <section className='relative mx-auto max-w-xl px-4 py-12 text-primary drop-shadow-2xl'>
+      <div className='absolute inset-1/2 -z-10 h-20 w-20 -translate-y-1/2 bg-transparent shadow-[0_0_150px_10px] shadow-primary/70 ltr:-translate-x-1/2 rtl:translate-x-1/2 md:h-32 md:w-32' />
       <svg
         width='100%'
         height='100%'
@@ -388,7 +388,7 @@ const Cpu = () => {
           </linearGradient>
         </defs>
       </svg>
-    </div>
+    </section>
   );
 };
 

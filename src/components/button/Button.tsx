@@ -48,7 +48,8 @@ const TEXT: Record<ButtonTheme, string> = {
   tertiary: 'hover:bg-tertiary-light/5 active:bg-tertiary-light/5 ring-tertiary text-tertiary',
   error: 'hover:bg-error-light/5 active:bg-error-light/5 ring-error text-error-dark',
   success: 'hover:bg-success-light/5 active:bg-success-light/5 ring-success text-success-dark',
-  white: 'hover:bg-white/5 active:bg-white/5 ring-white text-white',
+  white:
+    'dark:hover:bg-white/5 dark:active:bg-white/5 dark:ring-white dark:text-white hover:bg-black/5 active:bg-black/5 ring-black text-black',
 };
 
 function MainButton<C extends React.ElementType>(

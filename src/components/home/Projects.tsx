@@ -103,7 +103,7 @@ const Projects = ({ lang }: Props) => {
                 alt={DUMMY[inView].title}
                 fill
                 sizes='(max-width: 1024px) 100vw, 800px'
-                className='mx-auto h-full max-h-[70%] max-w-[94%] overflow-y-auto object-cover'
+                className='mx-auto h-full max-h-[80%] max-w-[94%] overflow-y-auto object-cover'
               />
             </motion.div>
           </div>

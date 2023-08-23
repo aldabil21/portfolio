@@ -84,7 +84,7 @@ const HomeBanner = ({ lang }: Props) => {
             <Button
               theme='white'
               shape='text'
-              className='px-0'
+              className='px-0 text-text ring-0 focus:ring-0'
               onClick={() => {
                 scrollIntoElementId('about');
               }}
@@ -98,7 +98,7 @@ const HomeBanner = ({ lang }: Props) => {
             <Button
               theme='white'
               shape='text'
-              className='px-0'
+              className='px-0 text-text ring-0 focus:ring-0'
               onClick={() => {
                 scrollIntoElementId('projects');
               }}

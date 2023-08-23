@@ -66,6 +66,7 @@ module.exports = {
           'linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 30%,rgb(var(--color-text-light)) 30%,rgb(var(--color-text-light)) 50%,rgb(var(--color-text-light)) 90%,rgb(var(--color-text-light)) 90%,rgba(255,255,255,0) 100%)',
         'dashed-line-horizontal':
           'linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 30%,rgb(var(--color-text-light)) 30%,rgb(var(--color-text-light)) 50%,rgb(var(--color-text-light)) 90%,rgb(var(--color-text-light)) 90%,rgba(255,255,255,0) 100%)',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       backgroundSize: {
         'dashed-line-vertical': '1px 12px',

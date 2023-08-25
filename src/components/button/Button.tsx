@@ -15,7 +15,6 @@ type ComponentProps<C extends React.ElementType> = {
 type Props<C extends React.ElementType = 'button'> = ComponentProps<C> &
   React.ComponentPropsWithoutRef<C>;
 
-// CSS
 const SOLID: Record<ButtonTheme, string> = {
   primary:
     'bg-primary hover:bg-primary-light active:bg-primary-dark ring-primary text-primary-contrast',
@@ -28,7 +27,7 @@ const SOLID: Record<ButtonTheme, string> = {
     'bg-success hover:bg-success-light active:bg-success-dark ring-success text-success-contrast',
   white: 'bg-white hover:bg-white active:bg-white-dark ring-white text-black',
 };
-//  shadow-inner shadow-primary-contrast
+
 const OUTLINED: Record<ButtonTheme, string> = {
   primary: `border-primary bg-primary-light/10 active:bg-primary-light/20 ring-primary text-primary 
   bg-[url(/images/noise-dark.png)] dark:bg-[url(/images/noise.png)] shadow-[inset_0_0_20px_0] hover:shadow-[inset_0_0_40px_0] !shadow-primary-light/30 dark:!shadow-primary-contrast/20`,
@@ -42,6 +41,7 @@ const OUTLINED: Record<ButtonTheme, string> = {
   white: `dark:border-white border-black hover:bg-black/5 dark:hover:bg-white/5 active:bg-black/10 dark:active:bg-white/10 ring-black dark:ring-white
   text-black dark:text-white bg-[url(/images/noise-dark.png)] dark:bg-[url(/images/noise.png)] shadow-[inset_0_0_20px_0] hover:shadow-[inset_0_0_40px_0] !shadow-black/20 dark:!shadow-white/20`,
 };
+
 const TEXT: Record<ButtonTheme, string> = {
   primary: 'hover:bg-primary-light/5 active:bg-primary-light/5 ring-primary text-primary',
   secondary: 'hover:bg-secondary-light/5 active:bg-secondary-light/5 ring-secondary text-secondary',

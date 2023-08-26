@@ -1,6 +1,7 @@
 'use client';
 import { useMemo } from 'react';
-import { motion, AnimationProps, MotionProps } from 'framer-motion';
+import type { AnimationProps, MotionProps } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 type Props = {
   lang: string;
@@ -23,7 +24,7 @@ type Props = {
   className?: string;
 } & MotionProps;
 
-const Reveal = ({
+export const Reveal = ({
   lang,
   children,
   threshold = 0.3,

@@ -8,12 +8,23 @@
   "typesVersions": {
     "*": {
       "*": [
+        "./dist/*/index.d.ts",
         "dist/*.d.ts"
       ]
     }
   },
   "exports": {
-    ".": "./dist",
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": {
+      "require": "./dist/*/index.js",
+      "import": "./dist/*/index.mjs",
+      "types": "./dist/*/index.d.ts"
+    },
     "./styles.css": "./dist/index.css"
   },
   "license": "MIT",
@@ -24,6 +35,7 @@
     "check-types": "tsc --noEmit"
   },
   "peerDependencies": {
+    "framer-motion": "^10.16.1",
     "react": "^18.2.0"
   },
   "devDependencies": {

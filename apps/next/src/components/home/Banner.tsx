@@ -1,11 +1,11 @@
 'use client';
-import Reveal from '../animation/Reveal';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ChevronIcon from '../svgs/chevron';
 import { useTranslation } from '@/i18n/client';
 import Button from '../button/Button';
 import { scrollIntoElementId } from '@/util/scrollIntoView';
+import { Reveal } from 'shared-components/animations';
 
 type Props = {
   lang: Languages;
@@ -26,12 +26,12 @@ const HomeBanner = ({ lang }: Props) => {
 
   return (
     <section className='relative mx-auto mt-10 max-w-6xl'>
-      <div className='absolute -top-5 left-2 w-px animate-dashed-line-vertical bg-dashed-line-vertical md:left-7' />
-      <div className='absolute -top-5 right-2 w-px animate-dashed-line-vertical bg-dashed-line-vertical animation-delay-500 md:right-7' />
-      <div className='absolute left-0 top-0 h-px animate-dashed-line-horizontal bg-dashed-line-horizontal' />
+      <div className='animate-dashed-line-vertical bg-dashed-line-vertical absolute -top-5 left-2 w-px md:left-7' />
+      <div className='animate-dashed-line-vertical bg-dashed-line-vertical animation-delay-500 absolute -top-5 right-2 w-px md:right-7' />
+      <div className='animate-dashed-line-horizontal bg-dashed-line-horizontal absolute left-0 top-0 h-px' />
 
       <div className='relative mx-auto h-5 w-1'>
-        <div className='absolute -top-5 left-0 w-px animate-dashed-line-vertical bg-dashed-line-vertical animation-delay-300' />
+        <div className='animate-dashed-line-vertical bg-dashed-line-vertical animation-delay-300 absolute -top-5 left-0 w-px' />
       </div>
 
       <div className='relative'>
@@ -64,7 +64,7 @@ const HomeBanner = ({ lang }: Props) => {
             </AnimatePresence>
           </Reveal>
         </div>
-        <div className='absolute bottom-0 left-0 h-px animate-dashed-line-horizontal bg-dashed-line-horizontal animation-delay-300' />
+        <div className='animate-dashed-line-horizontal bg-dashed-line-horizontal animation-delay-300 absolute bottom-0 left-0 h-px' />
       </div>
 
       <div className='relative mx-auto flex flex-col md:flex-row'>
@@ -109,12 +109,12 @@ const HomeBanner = ({ lang }: Props) => {
           </Reveal>
         </div>
 
-        <div className='absolute -top-1 left-1/2 hidden w-px -translate-x-1/2 animate-dashed-line-vertical bg-dashed-line-vertical animation-delay-700 md:block' />
+        <div className='animate-dashed-line-vertical bg-dashed-line-vertical animation-delay-700 absolute -top-1 left-1/2 hidden w-px -translate-x-1/2 md:block' />
       </div>
 
       {/* Bottom line */}
       <div className='pb-6 pt-4'>
-        <div className='absolute bottom-10 left-0 h-px animate-dashed-line-horizontal bg-dashed-line-horizontal animation-delay-700' />
+        <div className='animate-dashed-line-horizontal bg-dashed-line-horizontal animation-delay-700 absolute bottom-10 left-0 h-px' />
       </div>
     </section>
   );

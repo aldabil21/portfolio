@@ -17,5 +17,10 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "framer-motion": "^10.16.1",
+    "shared-components": "workspace:^",
+    "workspace": "^0.0.1-preview.1"
+  }
 }

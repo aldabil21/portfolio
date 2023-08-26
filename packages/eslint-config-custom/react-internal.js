@@ -14,9 +14,11 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 
 module.exports = {
   extends: [
-    '@vercel/style-guide/eslint/browser',
-    '@vercel/style-guide/eslint/typescript',
-    '@vercel/style-guide/eslint/react',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    // '@vercel/style-guide/eslint/browser',
+    // '@vercel/style-guide/eslint/typescript',
+    // '@vercel/style-guide/eslint/react',
   ].map(require.resolve),
   parserOptions: {
     project,
@@ -33,7 +35,16 @@ module.exports = {
   },
   ignorePatterns: ['node_modules/', 'dist/', '.eslintrc.js'],
   // add rules configurations here
+  overrides: [
+    // Only uses Testing Library lint rules in test files
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
+    },
+  ],
   rules: {
-    'import/no-default-export': 'off',
+    quotes: ['error', 'single', { avoidEscape: true }],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
   },
 };

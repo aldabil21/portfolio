@@ -4,7 +4,7 @@ import Section from '../common/Section';
 import Image from 'next/image';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useTranslation } from '@/i18n/client';
-import Reveal from '../animation/Reveal';
+import { Reveal } from 'shared-components/animations';
 
 type Props = {
   lang: Languages;
@@ -135,7 +135,7 @@ const Projects = ({ lang }: Props) => {
               <p className='text-lg'>{project.description}</p>
               <div className='flex flex-wrap justify-center gap-4'>
                 {project.technologies.map((tech) => (
-                  <span key={tech} className='rounded-sm bg-secondary/20 px-4 py-1 text-sm'>
+                  <span key={tech} className='bg-secondary/20 rounded-sm px-4 py-1 text-sm'>
                     {tech}
                   </span>
                 ))}

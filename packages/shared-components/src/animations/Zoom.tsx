@@ -13,7 +13,7 @@ type Props = {
   className?: string;
 };
 
-const Zoom = ({
+export const Zoom = ({
   duration = 0.5,
   delay = 0,
   className,
@@ -39,5 +39,3 @@ const Zoom = ({
     </Component>
   );
 };
-
-export default Zoom;

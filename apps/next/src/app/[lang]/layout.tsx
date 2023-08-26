@@ -7,7 +7,7 @@ import { cairoFont } from '@/util/fonts';
 import { globalJsonLd } from '@/util/seo/jsonLd';
 import Layout from '@/components/layout';
 import '@/styles/globals.css';
-import 'shared-components/styles.css'
+import 'shared-components/styles.css';
 
 export const generateMetadata = ({ params }: NextPageProps): Promise<Metadata> => {
   return homeMetadata(params.lang);

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ChevronIcon from '../svgs/chevron';
 import { useTranslation } from '@/i18n/client';
-import Button from '../button/Button';
+import Button from '../button';
 import { scrollIntoElementId } from '@/util/scrollIntoView';
 import { Reveal } from 'shared-components/animations';
 
@@ -84,7 +84,7 @@ const HomeBanner = ({ lang }: Props) => {
             <Button
               theme='white'
               shape='text'
-              className='px-0'
+              className='!px-0'
               onClick={() => {
                 scrollIntoElementId('about');
               }}
@@ -98,7 +98,7 @@ const HomeBanner = ({ lang }: Props) => {
             <Button
               theme='white'
               shape='text'
-              className='px-0'
+              className='!px-0'
               onClick={() => {
                 scrollIntoElementId('projects');
               }}

@@ -1,3 +1,3 @@
-export * from './Reveal';
-export * from './Fade';
-export * from './Zoom';
+export * from './reveal';
+export * from './fade';
+export * from './zoom';

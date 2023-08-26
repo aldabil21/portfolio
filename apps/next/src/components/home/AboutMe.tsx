@@ -1,6 +1,6 @@
 import { getTranslation } from '@/i18n';
 import Section from '../common/Section';
-import Button from '../button/Button';
+import Button from '../button';
 import DownloadIcon from '../svgs/download';
 
 type Props = {

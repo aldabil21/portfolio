@@ -65,6 +65,7 @@ export const Reveal = ({
     <Component
       className={className}
       initial={{ ...getInitial, opacity }}
+      viewport={{ once, amount: threshold }}
       whileInView={{
         x: 0,
         y: 0,
@@ -74,12 +75,9 @@ export const Reveal = ({
           duration,
         },
       }}
-      viewport={{ once, amount: threshold }}
       {...props}
     >
       {children}
     </Component>
   );
 };
-
-export default Reveal;

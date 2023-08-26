@@ -1,0 +1,6 @@
+/cache
+data
+build
+coverage
+.yarn
+.next

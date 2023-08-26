@@ -14,7 +14,7 @@ type Props = {
   className?: string;
 };
 
-const Fade = ({
+export const Fade = ({
   duration = 0.5,
   delay = 0,
   once = true,
@@ -27,14 +27,12 @@ const Fade = ({
 
   return (
     <Component
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1, transition: { delay, duration } }}
-      viewport={{ once, amount: threshold }}
       className={className}
+      initial={{ opacity: 0 }}
+      viewport={{ once, amount: threshold }}
+      whileInView={{ opacity: 1, transition: { delay, duration } }}
     >
       {children}
     </Component>
   );
 };
-
-export default Fade;

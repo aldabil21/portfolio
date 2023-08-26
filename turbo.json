@@ -8,8 +8,13 @@
       "dotEnv": [".env.development", ".env"]
     },
     "lint": {
-      "dependsOn": ["^lint"],
-      "dotEnv": [".env.development", ".env"]
+      "dependsOn": ["^lint"]
+    },
+    "format": {
+      "dependsOn": ["^format"]
+    },
+    "format:write": {
+      "dependsOn": ["^format:write"]
     },
     "dev": {
       "dotEnv": [".env.development", ".env"],

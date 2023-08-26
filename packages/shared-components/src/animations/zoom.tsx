@@ -26,14 +26,14 @@ export const Zoom = ({
 
   return (
     <Component
+      className={className}
       initial={{ opacity: 0, scale: 0 }}
+      viewport={{ once, amount: threshold }}
       whileInView={{
         opacity: 1,
         scale: 1,
         transition: { delay, duration, type: 'spring', bounce: 0.2 },
       }}
-      viewport={{ once, amount: threshold }}
-      className={className}
     >
       {children}
     </Component>

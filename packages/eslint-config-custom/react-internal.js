@@ -14,12 +14,11 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 
 module.exports = {
   extends: [
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-    // '@vercel/style-guide/eslint/browser',
-    // '@vercel/style-guide/eslint/typescript',
-    // '@vercel/style-guide/eslint/react',
+    '@vercel/style-guide/eslint/browser',
+    '@vercel/style-guide/eslint/typescript',
+    '@vercel/style-guide/eslint/react',
   ].map(require.resolve),
+  plugins: ['eslint-plugin-tsdoc'],
   parserOptions: {
     project,
   },
@@ -44,7 +43,10 @@ module.exports = {
   ],
   rules: {
     quotes: ['error', 'single', { avoidEscape: true }],
-    'no-unused-vars': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    'tsdoc/syntax': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'react/function-component-definition': 'off',
   },
 };

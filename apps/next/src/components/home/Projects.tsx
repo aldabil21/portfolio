@@ -4,7 +4,7 @@ import Section from '../common/Section';
 import Image from 'next/image';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useTranslation } from '@/i18n/client';
-import { Reveal } from 'shared-components/animations';
+import { Reveal } from 'ui/animations';
 
 type Props = {
   lang: Languages;

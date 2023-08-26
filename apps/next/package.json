@@ -23,7 +23,7 @@
     "react-dom": "18.2.0",
     "react-i18next": "^12.3.1",
     "server-only": "^0.0.1",
-    "shared-components": "workspace:^"
+    "ui": "workspace:^"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",

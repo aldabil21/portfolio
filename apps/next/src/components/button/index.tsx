@@ -1,6 +1,6 @@
 'use client';
 import React, { forwardRef, useMemo } from 'react';
-import { Button as UiButton } from 'shared-components/button';
+import { Button as UiButton } from 'ui/button';
 
 type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'error' | 'success' | 'white';
 type ButtonShape = 'solid' | 'outlined' | 'text';

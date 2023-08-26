@@ -5,7 +5,7 @@ import ChevronIcon from '../svgs/chevron';
 import { useTranslation } from '@/i18n/client';
 import Button from '../button';
 import { scrollIntoElementId } from '@/util/scrollIntoView';
-import { Reveal } from 'shared-components/animations';
+import { Reveal } from 'ui/animations';
 
 type Props = {
   lang: Languages;

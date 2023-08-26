@@ -9,7 +9,7 @@ export const config = {
   matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)'],
 };
 const PUBLIC_FILE = /\.(.*)$/;
-const cookieName = 'i18next';
+const cookieName = 'lang';
 
 export function middleware(req: NextRequest) {
   if (
@@ -37,7 +37,7 @@ export function middleware(req: NextRequest) {
   // Redirect if locale in path is not supported
   const hasValidLocale = languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`));
   if (!hasValidLocale) {
-    let locale;
+    let locale: string | null = null;
     if (req.cookies.has(cookieName)) {
       locale = acceptLanguage.get(req.cookies.get(cookieName)?.value);
     }
@@ -50,6 +50,15 @@ export function middleware(req: NextRequest) {
     const pathname = req.nextUrl.pathname;
     const search = req.nextUrl.search;
     return NextResponse.redirect(new URL(`/${locale}/${pathname}${search}`, req.url));
+  } else {
+    const currentLocale = req.nextUrl.pathname.split('/')[1];
+    // Set cookie for next request
+    response.cookies.set({
+      name: cookieName,
+      value: currentLocale,
+      expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+      path: '/',
+    });
   }
 
   return response;

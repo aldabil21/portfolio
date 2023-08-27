@@ -18,13 +18,7 @@ const AboutMe = async ({ lang }: Props) => {
       <p>{t('home:about_me_1')}</p>
       <p>{t('home:about_me_2')}</p>
 
-      <Button
-        as='a'
-        className='gap-2 text-lg'
-        download='Abdulraoof.pdf'
-        href='/pdf/CV.pdf'
-        theme='primary'
-      >
+      <Button as='a' className='gap-2 text-lg' download='Abdulraoof.pdf' href='/pdf/CV.pdf'>
         <DownloadIcon />
         {t('home:download_cv')}
       </Button>

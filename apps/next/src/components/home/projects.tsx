@@ -5,6 +5,8 @@ import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { Reveal } from 'ui/animations';
 import Section from '../common/section';
 import { useTranslation } from '../../i18n/client';
+import Button from '../button';
+import Link from 'next/link';
 
 type Props = {
   lang: Languages;
@@ -18,6 +20,7 @@ const DUMMY = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
     technologies: ['React', 'Next.js', 'Tailwind CSS'],
     image: '/images/frmf/1.png',
+    link: '#',
   },
   {
     id: 2,
@@ -26,6 +29,7 @@ const DUMMY = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
     technologies: ['React', 'Next.js', 'Tailwind CSS'],
     image: '/images/ertiqa/1.png',
+    link: '#',
   },
   {
     id: 3,
@@ -34,6 +38,7 @@ const DUMMY = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
     technologies: ['React', 'Next.js', 'Tailwind CSS'],
     image: '/images/frmf/1.png',
+    link: '#',
   },
   {
     id: 4,
@@ -42,6 +47,7 @@ const DUMMY = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
     technologies: ['React', 'Next.js', 'Tailwind CSS'],
     image: '/images/ertiqa/1.png',
+    link: '#',
   },
   {
     id: 5,
@@ -50,6 +56,7 @@ const DUMMY = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
     technologies: ['React', 'Next.js', 'Tailwind CSS'],
     image: '/images/frmf/1.png',
+    link: '#',
   },
   {
     id: 6,
@@ -58,6 +65,7 @@ const DUMMY = [
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
     technologies: ['React', 'Next.js', 'Tailwind CSS'],
     image: '/images/ertiqa/1.png',
+    link: '#',
   },
 ];
 
@@ -139,6 +147,12 @@ const Projects = ({ lang }: Props) => {
                     {tech}
                   </span>
                 ))}
+              </div>
+
+              <div className='mx-auto max-w-xs py-8 text-center'>
+                <Button as={Link} className='w-full' href={project.link} theme='secondary'>
+                  {t('home:visit_project')}
+                </Button>
               </div>
             </Reveal>
             <div className='hidden flex-1 lg:block' />

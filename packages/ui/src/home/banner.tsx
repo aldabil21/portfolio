@@ -116,7 +116,7 @@ export const HomeBanner = ({
             lang={lang}
           >
             <Button
-              className='!ui-px-0'
+              className='!ui-px-0 !ui-ring-0'
               onClick={() => {
                 scrollIntoElementId('about');
               }}
@@ -135,7 +135,7 @@ export const HomeBanner = ({
             lang={lang}
           >
             <Button
-              className='!ui-px-0'
+              className='!ui-px-0 !ui-ring-0'
               onClick={() => {
                 scrollIntoElementId('projects');
               }}

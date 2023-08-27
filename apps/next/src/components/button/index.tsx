@@ -1,5 +1,6 @@
 'use client';
 import React, { forwardRef, useMemo } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { Button as UiButton } from 'ui/button';
 
 type ButtonTheme = 'primary' | 'secondary' | 'tertiary' | 'error' | 'success' | 'white';
@@ -13,10 +14,11 @@ type ComponentProps<C extends React.ElementType> = {
   as?: C | React.ElementType<C>;
 };
 type Props<C extends React.ElementType = 'button'> = ComponentProps<C> &
-  React.ComponentPropsWithoutRef<C>;
+  React.ComponentPropsWithoutRef<C> &
+  React.HTMLAttributes<C>;
 
 function MainButton<C extends React.ElementType>(
-  { children, theme = 'primary', shape = 'outlined', ...props }: Props<C>,
+  { children, theme = 'primary', shape = 'outlined', className, ...props }: Props<C>,
   ref: React.ForwardedRef<never>
 ) {
   const Component = UiButton as React.ElementType;
@@ -30,7 +32,13 @@ function MainButton<C extends React.ElementType>(
   }, [shape]);
 
   return (
-    <Component className={btnClasses} shape={shape} theme={theme} {...props} ref={ref}>
+    <Component
+      className={twMerge(btnClasses, className)}
+      shape={shape}
+      theme={theme}
+      {...props}
+      ref={ref}
+    >
       {children}
     </Component>
   );

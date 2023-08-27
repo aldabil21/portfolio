@@ -52,6 +52,9 @@ module.exports = {
           DEFAULT: 'rgb(var(--color-body) / <alpha-value>)',
         },
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
     },
   },
 

@@ -30,18 +30,18 @@ const SOLID: Record<ButtonTheme, string> = {
 };
 
 const OUTLINED: Record<ButtonTheme, string> = {
-  primary: `ui-border-primary ui-bg-primary-light/10 active:ui-bg-primary-light/20 ui-ring-primary ui-text-primary 
-  ui-shadow-[inset_0_0_20px_0] hover:ui-shadow-[inset_0_0_40px_0] !ui-shadow-primary-light/30 dark:!ui-shadow-primary-contrast/20`,
+  primary: `ui-border-primary active:ui-bg-primary-light/20 ui-ring-primary ui-text-primary 
+  ui-shadow-[inset_0_0_10px_rgb(var(--color-primary))] hover:ui-shadow-[inset_0_0_20px_0_rgb(var(--color-primary)/10)]`,
   secondary: `ui-border-secondary hover:ui-bg-secondary-light/5 active:ui-bg-secondary-light/10 ui-ring-secondary ui-text-secondary
-  ui-shadow-[inset_0_0_20px_0] hover:ui-shadow-[inset_0_0_40px_0] !ui-shadow-secondary-light/30 dark:!ui-shadow-secondary-contrast/20`,
+  ui-shadow-[inset_0_0_10px_rgb(var(--color-secondary))] hover:ui-shadow-[inset_0_0_20px_0_rgb(var(--color-secondary)/10)]`,
   tertiary: `ui-border-tertiary hover:ui-bg-tertiary-light/5 active:ui-bg-tertiary-light/10 ui-ring-tertiary ui-text-tertiary-contrast
-  ui-shadow-[inset_0_0_20px_0] hover:ui-shadow-[inset_0_0_40px_0] !ui-shadow-tertiary-contrast/20`,
+  ui-shadow-[inset_0_0_10px_rgb(var(--color-tertiary))] hover:ui-shadow-[inset_0_0_20px_0_rgb(var(--color-tertiary)/10)]`,
   error:
     'ui-border-error hover:ui-bg-error-light/5 active:ui-bg-error-light/10 ui-ring-error ui-text-error-dark',
   success:
     'ui-border-success hover:ui-bg-success-light/5 active:ui-bg-success-light/10 ui-ring-success ui-text-success-dark',
   white: `dark:ui-border-white ui-border-black hover:ui-bg-black/5 dark:hover:ui-bg-white/5 active:ui-bg-black/10 dark:active:ui-bg-white/10 ui-ring-black dark:ui-ring-white
-  ui-text-black dark:ui-text-white ui-shadow-[inset_0_0_20px_0] hover:ui-shadow-[inset_0_0_40px_0] !ui-shadow-black/20 dark:!ui-shadow-white/20`,
+  ui-text-black dark:ui-text-white ui-shadow-[inset_0_0_10px_rgb(255,255,255)] hover:ui-shadow-[inset_0_0_20px_0_rgb(255,255,255,0.1)]`,
 };
 
 const TEXT: Record<ButtonTheme, string> = {
@@ -55,7 +55,7 @@ const TEXT: Record<ButtonTheme, string> = {
   success:
     'hover:ui-bg-success-light/5 active:ui-bg-success-light/5 ui-ring-success ui-text-success-dark',
   white:
-    'dark:hover:ui-bg-white/5 dark:active:ui-bg-white/5 dark:ui-ring-white dark:ui-text-white hover:ui-bg-black/5 active:ui-bg-black/5 ui-ring-black ui-text-black',
+    'ui-text-text ui-ring-black dark:hover:ui-bg-white/5 dark:active:ui-bg-white/5 dark:ui-ring-white hover:ui-bg-black/5 active:ui-bg-black/5 ',
 };
 
 function MainButton<C extends React.ElementType>(
@@ -89,7 +89,7 @@ function MainButton<C extends React.ElementType>(
       className={twMerge(
         btnClasses,
         `ui-ring-offset-body ui-relative ui-inline-flex ui-items-center ui-justify-center ui-gap-1 ui-overflow-hidden ui-px-6 ui-py-2
-        ui-text-center ui-transition-all focus:ui-outline-none disabled:ui-cursor-not-allowed disabled:ui-text-gray-400`,
+        ui-text-center ui-transition-all ui-duration-200 focus:ui-outline-none disabled:ui-cursor-not-allowed disabled:ui-text-gray-400`,
         rounded ? 'ui-rounded-md' : '',
         className || ''
       )}

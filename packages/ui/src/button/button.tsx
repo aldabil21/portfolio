@@ -1,4 +1,3 @@
-'use client';
 import type { HTMLAttributes } from 'react';
 import React, { forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';

@@ -1,7 +1,6 @@
-'use client';
 import { useMemo } from 'react';
-import type { AnimationProps, MotionProps } from 'framer-motion';
 import { motion } from 'framer-motion';
+import type { AnimationProps, MotionProps } from 'framer-motion';
 
 type Props = {
   lang: string;

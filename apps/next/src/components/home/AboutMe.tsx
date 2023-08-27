@@ -1,7 +1,7 @@
 import { getTranslation } from '@/i18n';
 import Section from '../common/Section';
 import Button from '../button';
-import DownloadIcon from '../svgs/download';
+import { DownloadIcon } from 'ui/icons';
 
 type Props = {
   lang: Languages;

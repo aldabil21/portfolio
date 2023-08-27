@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { createCookie, readCookie } from '@/util/cookies';
+import { createCookie, readCookie } from 'utils/cookie';
 
 const ThemeSwitcher = () => {
   const [theme, setTheme] = useState<string | null>('dark');

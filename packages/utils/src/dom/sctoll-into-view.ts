@@ -3,4 +3,5 @@ export const scrollIntoElementId = (id: string, options?: ScrollIntoViewOptions)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth', ...options });
   }
+  return;
 };

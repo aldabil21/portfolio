@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
-import { getTranslation } from '@/i18n';
-import { languages } from '@/i18n/settings';
+import type { Metadata } from 'next';
+import { getTranslation } from '../../i18n';
+import { languages } from '../../i18n/settings';
 import { hrefLangAlternates } from './alternates';
 
 export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
@@ -10,7 +10,7 @@ export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || ''),
     title: {
       template: `%s | ${t('title')}`,
-      default: t('seo.title').toString(),
+      default: t('seo.title'),
     },
     description: t('seo.description'),
     robots: process.env.NEXT_PUBLIC_ENV !== 'production' ? 'noindex, nofollow' : undefined,
@@ -19,8 +19,8 @@ export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
       site: '@aldabil21',
     },
     openGraph: {
-      siteName: t('seo.title').toString(),
-      title: t('seo.title').toString(),
+      siteName: t('seo.title'),
+      title: t('seo.title'),
       type: 'website',
       url: '/',
       locale: lang,
@@ -28,7 +28,7 @@ export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
       images: [
         {
           url: '/images/default-cover.jpg',
-          alt: t('common:seo.alt').toString(),
+          alt: t('common:seo.alt'),
         },
       ],
     },

@@ -1,6 +1,6 @@
 'use client';
-import { useTranslation } from '@/i18n/client';
 import { HomeBanner } from 'ui/home';
+import { useTranslation } from '../../i18n/client';
 
 type Props = {
   lang: Languages;
@@ -11,15 +11,15 @@ const HomeBannerComp = ({ lang }: Props) => {
 
   return (
     <HomeBanner
-      lang={lang}
-      titles={[t('home:web_developer'), t('home:full_stack'), t('home:js_developer')]}
-      hello={t('home:hello')}
-      name={t('home:abdulraoof')}
-      senior={t('home:senior')}
-      years={t('home:years')}
-      projects={t('home:projects')}
       aboutMe={t('home:about_me')}
+      hello={t('home:hello')}
+      lang={lang}
+      name={t('home:abdulraoof')}
+      projects={t('home:projects')}
       recentProjects={t('home:recent_projects')}
+      senior={t('home:senior')}
+      titles={[t('home:web_developer'), t('home:full_stack'), t('home:js_developer')]}
+      years={t('home:years')}
     />
   );
 };

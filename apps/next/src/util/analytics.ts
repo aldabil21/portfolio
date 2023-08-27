@@ -2,7 +2,7 @@ const IS_PROD = process.env.NEXT_PUBLIC_ENV === 'production';
 
 const pushToDataLayer = (obj: Record<string, unknown>) => {
   if (typeof window !== 'undefined') {
-    const dataLayer = window?.dataLayer;
+    const dataLayer = window.dataLayer as unknown[] | undefined;
     if (dataLayer) {
       dataLayer.push(obj);
       if (!IS_PROD) {

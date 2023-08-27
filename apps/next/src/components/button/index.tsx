@@ -30,7 +30,7 @@ function MainButton<C extends React.ElementType>(
   }, [shape]);
 
   return (
-    <Component className={btnClasses} theme={theme} shape={shape} {...props} ref={ref}>
+    <Component className={btnClasses} shape={shape} theme={theme} {...props} ref={ref}>
       {children}
     </Component>
   );

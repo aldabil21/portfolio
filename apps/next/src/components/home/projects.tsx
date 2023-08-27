@@ -1,10 +1,10 @@
 'use client';
 import { useEffect, useState } from 'react';
-import Section from '../common/Section';
 import Image from 'next/image';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
-import { useTranslation } from '@/i18n/client';
 import { Reveal } from 'ui/animations';
+import Section from '../common/section';
+import { useTranslation } from '../../i18n/client';
 
 type Props = {
   lang: Languages;
@@ -74,11 +74,11 @@ const Projects = ({ lang }: Props) => {
   useEffect(() => {
     rotateY.set(-ROTATE);
     left.set(lang === 'ar' ? '-50%' : '50%');
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <Section id='projects' className='py-12'>
+    <Section className='py-12' id='projects'>
       <h2 className='text-center'>{t('home:recent_projects')}</h2>
       <div className='relative'>
         {/* Monitor */}
@@ -88,22 +88,22 @@ const Projects = ({ lang }: Props) => {
               className='relative inline-block h-full max-h-[700px] w-[50%] max-w-[800px] overflow-hidden'
               layout
               layoutId='image'
-              transformTemplate={(_, transform) => `perspective(2000px) ${transform}`}
               style={{ rotateY, left }}
+              transformTemplate={(_, transform) => `perspective(2000px) ${transform}`}
             >
               <Image
-                src='/images/frame.png'
                 alt=''
-                width={800}
-                height={700}
                 className='relative z-10'
+                height={700}
+                src='/images/frame.png'
+                width={800}
               />
               <Image
-                src={DUMMY[inView].image}
                 alt={DUMMY[inView].title}
+                className='mx-auto h-full max-h-[80%] max-w-[94%] overflow-y-auto object-cover'
                 fill
                 sizes='(max-width: 1024px) 100vw, 800px'
-                className='mx-auto h-full max-h-[80%] max-w-[94%] overflow-y-auto object-cover'
+                src={DUMMY[inView].image}
               />
             </motion.div>
           </div>
@@ -111,15 +111,14 @@ const Projects = ({ lang }: Props) => {
         {/* List */}
         {DUMMY.map((project, i) => (
           <div
-            key={project.id}
             className={`flex flex-col items-center gap-6
-              ${i % 2 > 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
+            ${i % 2 > 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
+            key={project.id}
           >
             <Reveal
+              className='flex-1 space-y-2 py-52'
               direction='bottom'
               lang={lang}
-              className='flex-1 space-y-2 py-52'
-              once={false}
               onViewportEnter={() => {
                 setInView(i);
                 rotateY.set(i % 2 === 0 ? -ROTATE : ROTATE);
@@ -129,19 +128,20 @@ const Projects = ({ lang }: Props) => {
                   left.set(i % 2 === 0 ? '50%' : '0%');
                 }
               }}
+              once={false}
               threshold={0.8}
             >
               <h3 className='text-xl font-semibold'>{project.title}</h3>
               <p className='text-lg'>{project.description}</p>
               <div className='flex flex-wrap justify-center gap-4'>
                 {project.technologies.map((tech) => (
-                  <span key={tech} className='bg-secondary/20 rounded-sm px-4 py-1 text-sm'>
+                  <span className='bg-secondary/20 rounded-sm px-4 py-1 text-sm' key={tech}>
                     {tech}
                   </span>
                 ))}
               </div>
             </Reveal>
-            <div className='hidden flex-1 lg:block'></div>
+            <div className='hidden flex-1 lg:block' />
           </div>
         ))}
       </div>

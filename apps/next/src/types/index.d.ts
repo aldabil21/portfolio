@@ -1,16 +1,22 @@
 type Languages = 'en' | 'ar';
 
-type NextLayout<T = object> = (props: NextLayoutProps & NextPageProps & T) => ReactElement | null;
-type NextPage<T = object> = (props: NextPageProps & T) => ReactElement | null;
-type NextError<T = object> = (props: NextErrorProps & T) => ReactElement | null;
+type NextLayout<T = object> = (
+  props: NextLayoutProps & NextPageProps & T
+) => React.ReactElement | Promise<React.ReactElement> | null;
+type NextPage<T = object> = (
+  props: NextPageProps & T
+) => React.ReactElement | Promise<React.ReactElement> | null;
+type NextError<T = object> = (
+  props: NextErrorProps & T
+) => React.ReactElement | Promise<React.ReactElement> | null;
 type NextLayoutProps = {
-  children: ReactElement | null;
+  children: React.ReactElement | null;
 };
 type NextPageProps = {
   params: {
     lang: Languages;
   };
-  searchParams?: { [key: string]: string | string[] };
+  searchParams?: Record<string, string | string[]>;
 };
 type NextErrorProps = {
   error: Error;

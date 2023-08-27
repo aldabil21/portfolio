@@ -1,14 +1,12 @@
 'use client';
 import { useEffect } from 'react';
 import i18next from 'i18next';
-import {
-  UseTranslationOptions,
-  initReactI18next,
-  useTranslation as useTranslationOrg,
-} from 'react-i18next';
+import type { UseTranslationOptions } from 'react-i18next';
+import { initReactI18next, useTranslation as useTranslationOrg } from 'react-i18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import { getOptions, languages, namespaces } from './settings';
+import type { languages, namespaces } from './settings';
+import { getOptions } from './settings';
 
 // on client side the normal singleton is ok
 i18next

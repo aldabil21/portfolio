@@ -1,13 +1,14 @@
 import { createInstance } from 'i18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { initReactI18next } from 'react-i18next/initReactI18next';
-import { defaultNS, fallbackLng, getOptions, languages, namespaces } from './settings';
-import { UseTranslationOptions } from 'react-i18next';
+import type { UseTranslationOptions } from 'react-i18next';
+import type { languages, namespaces } from './settings';
+import { defaultNS, fallbackLng, getOptions } from './settings';
 
-type lang = (typeof languages)[number];
-type namespace = (typeof namespaces)[number] | (typeof namespaces)[number][];
+type Lang = (typeof languages)[number];
+type Namespace = (typeof namespaces)[number] | (typeof namespaces)[number][];
 
-const initI18next = async (lng?: lang, namespace?: namespace) => {
+const initI18next = async (lng?: Lang, namespace?: Namespace) => {
   // on server side we create a new instance for each render, because during compilation everything seems to be executed in parallel
   const i18nInstance = createInstance();
   await i18nInstance
@@ -22,8 +23,8 @@ const initI18next = async (lng?: lang, namespace?: namespace) => {
 };
 
 export async function getTranslation(
-  lng?: lang,
-  namespace?: namespace,
+  lng?: Lang,
+  namespace?: Namespace,
   options: UseTranslationOptions = {}
 ) {
   const ns = namespace || defaultNS;

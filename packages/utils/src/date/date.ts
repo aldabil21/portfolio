@@ -5,10 +5,10 @@
 export const parseDate = (date?: string) => {
   let safeDate = date?.replace(' ', 'T') || Date.now();
 
-  if (typeof safeDate === 'string' && safeDate?.includes('-')) {
+  if (typeof safeDate === 'string' && safeDate.includes('-')) {
     // Split it, if it starts with not a year (4 digits)
-    const date = safeDate?.split('T')[0];
-    const [day, month, year] = date?.split('-');
+    const splittedDate = safeDate.split('T')[0];
+    const [day, month, year] = splittedDate.split('-');
     if (day.length <= 2) {
       safeDate = `${year}-${month}-${day}`;
     }
@@ -38,12 +38,14 @@ export const formatDate = (
     numberingSystem: 'latn',
   };
 
-  const safeDate =
-    typeof date === 'string'
-      ? parseDate(date)
-      : typeof date === 'number'
-      ? new Date(date * 1000)
-      : date;
+  let safeDate;
+  if (typeof date === 'string') {
+    safeDate = parseDate(date);
+  } else if (typeof date === 'number') {
+    safeDate = new Date(date * 1000);
+  } else {
+    safeDate = date;
+  }
 
   return new Intl.DateTimeFormat(locale, Object.assign(defaultoptions, options)).format(safeDate);
 };

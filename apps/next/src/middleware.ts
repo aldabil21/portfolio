@@ -1,6 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 import acceptLanguage from 'accept-language';
-import { fallbackLng, languages } from '@/i18n/settings';
+import { fallbackLng, languages } from './i18n/settings';
 
 acceptLanguage.languages(languages);
 
@@ -8,13 +9,13 @@ export const config = {
   // matcher: '/:lng*'
   matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)'],
 };
-const PUBLIC_FILE = /\.(.*)$/;
+const PUBLIC_FILE = /\.(?:.*)$/;
 const cookieName = 'lang';
 
 export function middleware(req: NextRequest) {
   if (
-    req.nextUrl.pathname.indexOf('icon') > -1 ||
-    req.nextUrl.pathname.indexOf('chrome') > -1 ||
+    req.nextUrl.pathname.includes('icon') ||
+    req.nextUrl.pathname.includes('chrome') ||
     req.nextUrl.pathname.startsWith('/_next') ||
     req.nextUrl.pathname.includes('/api/') ||
     PUBLIC_FILE.test(req.nextUrl.pathname)
@@ -50,16 +51,16 @@ export function middleware(req: NextRequest) {
     const pathname = req.nextUrl.pathname;
     const search = req.nextUrl.search;
     return NextResponse.redirect(new URL(`/${locale}/${pathname}${search}`, req.url));
-  } else {
-    const currentLocale = req.nextUrl.pathname.split('/')[1];
-    // Set cookie for next request
-    response.cookies.set({
-      name: cookieName,
-      value: currentLocale,
-      expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
-      path: '/',
-    });
   }
+
+  // Set cookie for next request
+  const currentLocale = req.nextUrl.pathname.split('/')[1];
+  response.cookies.set({
+    name: cookieName,
+    value: currentLocale,
+    expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+    path: '/',
+  });
 
   return response;
 }

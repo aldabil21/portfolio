@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 // import { getTranslation } from '@/i18n';
 
 export const metadata: Metadata = {
@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   robots: 'noindex nofollow',
 };
 
-const NotFound: NextPage = async () => {
+const NotFound: NextPage =  () => {
   // const { t } = await getTranslation(lang);
   return (
     <main>

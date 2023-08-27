@@ -1,7 +1,7 @@
 const { resolve } = require('node:path');
-
+const rules = require('./rules');
 const project = resolve(process.cwd(), 'tsconfig.json');
-
+console.log(project);
 /*
  * This is a custom ESLint configuration for use with
  * internal (bundled by their consumer) libraries
@@ -41,12 +41,5 @@ module.exports = {
       extends: ['plugin:testing-library/react'],
     },
   ],
-  rules: {
-    quotes: ['error', 'single', { avoidEscape: true }],
-    '@typescript-eslint/consistent-type-definitions': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
-    'tsdoc/syntax': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    'react/function-component-definition': 'off',
-  },
+  rules,
 };

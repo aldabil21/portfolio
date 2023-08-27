@@ -1,11 +1,11 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { dir } from 'i18next';
-import { languages } from '@/i18n/settings';
-import { homeMetadata } from '@/util/seo/metadata.ts';
-import { cairoFont } from '@/util/fonts';
-import { globalJsonLd } from '@/util/seo/jsonLd';
+import { globalJsonLd } from '@/util/seo/json-ld';
 import Layout from '@/components/layout';
+import { languages } from '../../i18n/settings';
+import { homeMetadata } from '../../util/seo/metadata';
+import { cairoFont } from '../../util/fonts';
 import '@/styles/globals.css';
 import 'ui/styles.css';
 
@@ -21,12 +21,12 @@ const LangRootLayout: NextLayout<{ auth: React.ReactNode }> = ({ children, param
   const cookiesList = cookies();
 
   return (
-    <html lang={lang} dir={dir(lang)} className={cookiesList.get('theme')?.value || 'dark'}>
+    <html className={cookiesList.get('theme')?.value || 'dark'} dir={dir(lang)} lang={lang}>
       <head>
         {/* Global JSON-LD */}
         <script
-          type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalJsonLd) }}
+          type='application/ld+json'
         />
       </head>
       <body className={`${cairoFont.variable} bg-body font-cairo text-text`}>

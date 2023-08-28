@@ -14,6 +14,12 @@ type Props = {
 
 const DUMMY = [
   {
+    project: 'diriyah',
+    slug: 'diriyah-season-2023',
+    description: [1, 2, 3],
+    image: '/images/diriyah/thumbnail.png',
+  },
+  {
     project: 'wtcr',
     slug: 'saudi-motorsports-wtcr-race',
     description: [1, 2, 3],

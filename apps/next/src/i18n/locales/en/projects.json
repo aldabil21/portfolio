@@ -17,5 +17,15 @@
       "3": "The launch of the Saudi MotorSports WTCR Race website marks an exciting chapter in the history of motorsports, where the fusion of sport and technology creates an unparalleled experience for fans. As racing enthusiasts eagerly prepare for the highly anticipated WTCR event, they can now navigate the exhilarating world of motorsports with a few clicks, secure their desired tickets, and choose their prime viewing spots within the circuit. With the Saudi Automobile & Motorcycle Federation leading the way, the future of motorsports has never looked more promising, dynamic, and interactive."
     },
     "technologies": "React,Next.js,TailwindCSS"
+  },
+  "diriyah": {
+    "title": "Diriyah Season 2023",
+    "subtitle": "",
+    "description": {
+      "1": "The Diriyah Season 2023 website offers a digital doorway to a realm of culture, entertainment, and heritage. The annual Diriyah Season, hosted in the historic city of Diriyah, Saudi Arabia, is a convergence of art, sport, music, and entertainment that captivates a global audience. The website serves as an all-encompassing guide, directing visitors to a multitude of experiences that await them.",
+      "2": "The website is a masterpiece of design, effortlessly blending modern aesthetics with traditional elements. Upon entering the site, visitors are immediately immersed in a visual journey, with captivating imagery that encapsulates the essence of Diriyah's ambiance.",
+      "3": "A key objective of the website is to showcase the diverse array of events that constitute the Diriyah Season 2023. Interactive event calendars, accompanied by comprehensive descriptions and compelling visuals, allow visitors to delve deep into the world of heart-pounding motorsports, enthralling concerts, cultural exhibitions, and more. Whether attendees seek the adrenaline rush of motorsports like the CORE Diriyah E-Prix 2023, the excitement of the SUPERCOPA DE ESPAÑA 2023, or even the spectacle of The Truth match featuring Jake Paul vs. Tommy Fury, the website acts as a compass guiding them to unforgettable experiences."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
   }
 }

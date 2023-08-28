@@ -14,63 +14,15 @@ type Props = {
 
 const DUMMY = [
   {
-    id: 1,
-    title: 'Project name',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
-    technologies: ['React', 'Next.js', 'Tailwind CSS'],
-    image: '/images/frmf/1.png',
-    link: '#',
-  },
-  {
-    id: 2,
-    title: 'Project name',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
-    technologies: ['React', 'Next.js', 'Tailwind CSS'],
-    image: '/images/ertiqa/1.png',
-    link: '#',
-  },
-  {
-    id: 3,
-    title: 'Project name',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
-    technologies: ['React', 'Next.js', 'Tailwind CSS'],
-    image: '/images/frmf/1.png',
-    link: '#',
-  },
-  {
-    id: 4,
-    title: 'Project name',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
-    technologies: ['React', 'Next.js', 'Tailwind CSS'],
-    image: '/images/ertiqa/1.png',
-    link: '#',
-  },
-  {
-    id: 5,
-    title: 'Project name',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
-    technologies: ['React', 'Next.js', 'Tailwind CSS'],
-    image: '/images/frmf/1.png',
-    link: '#',
-  },
-  {
-    id: 6,
-    title: 'Project name',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi similique aperiam voluptatem, cumque illum facilis in facere provident, eum deleniti dolor! Est veritatis pariatur aliquid magnam praesentium, voluptate quos deserunt amet adipisci rerum nesciunt blanditiis minima velit voluptates corporis officia sed consequuntur cupiditate reprehenderit fugiat vero sequi itaque a. Eos.',
-    technologies: ['React', 'Next.js', 'Tailwind CSS'],
-    image: '/images/ertiqa/1.png',
-    link: '#',
+    project: 'neom',
+    slug: 'neom-the-line-exhibition',
+    description: [1, 2],
+    image: '/images/neom/thumbnail.png',
   },
 ];
 
 const Projects = ({ lang }: Props) => {
-  const { t } = useTranslation(lang, 'home');
+  const { t } = useTranslation(lang, ['projects', 'home']);
   const [inView, setInView] = useState(0);
   const rotateY = useMotionValue(0);
   const left = useSpring('0' as unknown as never, {
@@ -90,7 +42,7 @@ const Projects = ({ lang }: Props) => {
       <h2 className='text-center'>{t('home:recent_projects')}</h2>
       <div className='relative'>
         {/* Monitor */}
-        <div className='sticky top-10 hidden w-full lg:block'>
+        <div className='sticky top-10 -z-10 hidden w-full lg:block'>
           <div className='absolute w-full'>
             <motion.div
               className='relative inline-block h-full max-h-[700px] w-[50%] max-w-[800px] overflow-hidden'
@@ -107,8 +59,8 @@ const Projects = ({ lang }: Props) => {
                 width={800}
               />
               <Image
-                alt={DUMMY[inView].title}
-                className='mx-auto h-full max-h-[80%] max-w-[94%] overflow-y-auto object-cover'
+                alt={t(`projects:${DUMMY[inView].project}.title`)}
+                className='mx-auto h-full max-h-[80%] max-w-[94%] overflow-y-auto object-contain'
                 fill
                 sizes='(max-width: 1024px) 100vw, 800px'
                 src={DUMMY[inView].image}
@@ -117,11 +69,11 @@ const Projects = ({ lang }: Props) => {
           </div>
         </div>
         {/* List */}
-        {DUMMY.map((project, i) => (
+        {DUMMY.map((p, i) => (
           <div
             className={`flex flex-col items-center gap-6
             ${i % 2 > 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
-            key={project.id}
+            key={p.project}
           >
             <Reveal
               className='flex-1 space-y-2 py-52'
@@ -137,20 +89,27 @@ const Projects = ({ lang }: Props) => {
                 }
               }}
               once={false}
-              threshold={0.8}
+              threshold={0.7}
             >
-              <h3 className='text-xl font-semibold'>{project.title}</h3>
-              <p className='text-lg'>{project.description}</p>
-              <div className='flex flex-wrap justify-center gap-4'>
-                {project.technologies.map((tech) => (
-                  <span className='bg-secondary/20 rounded-sm px-4 py-1 text-sm' key={tech}>
-                    {tech}
-                  </span>
-                ))}
+              <h3 className='text-2xl font-semibold'>{t(`projects:${p.project}.title`)}</h3>
+              {p.description.slice(0, 2).map((d) => (
+                <p className='text-lg' key={d}>
+                  {t(`projects:${p.project}.description.${d}`)}
+                </p>
+              ))}
+
+              <div className='flex flex-wrap gap-4 py-2'>
+                {t(`projects:${p.project}.technologies`)
+                  .split(',')
+                  .map((tech) => (
+                    <span className='bg-secondary/20 rounded-sm px-4 py-1 text-sm' key={tech}>
+                      {tech}
+                    </span>
+                  ))}
               </div>
 
               <div className='mx-auto max-w-xs py-8 text-center'>
-                <Button as={Link} className='w-full' href={project.link} theme='secondary'>
+                <Button as={Link} className='w-full' href={`/projects/${p.slug}`} theme='secondary'>
                   {t('home:visit_project')}
                 </Button>
               </div>

@@ -1,0 +1,11 @@
+{
+  "neom": {
+    "title": "Neom The Line Exhibition",
+    "subtitle": "",
+    "description": {
+      "1": "Step into the world of web development as we embark on a journey to create an unparalleled ticketing system tailored specifically for the Neom The Line Exhibition. This innovative platform will seamlessly integrate React, Next.js, Tailwind CSS, and cutting-edge time slot management, offering a unique and immersive experience",
+      "2": "the advanced time slot management system. Attendees will seamlessly explore available time slots for the Neom The Line Exhibition's captivating showcases and events. Our meticulous backend architecture will ensure real-time updates on time slot availability, enabling users to secure their spots with confidence and convenience."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
+  }
+}

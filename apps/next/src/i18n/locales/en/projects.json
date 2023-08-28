@@ -7,5 +7,15 @@
       "2": "the advanced time slot management system. Attendees will seamlessly explore available time slots for the Neom The Line Exhibition's captivating showcases and events. Our meticulous backend architecture will ensure real-time updates on time slot availability, enabling users to secure their spots with confidence and convenience."
     },
     "technologies": "React,Next.js,TailwindCSS"
+  },
+  "wtcr": {
+    "title": "Saudi MotorSports WTCR Race",
+    "subtitle": "",
+    "description": {
+      "1": "The Saudi MotorSports WTCR Race website emerges as a one-stop destination for securing tickets to the adrenaline-pumping WTCR event. With a user-friendly interface, the website ensures a seamless and hassle-free booking process for motorsports enthusiasts from around the globe. Users can effortlessly navigate through the various ticket categories, from general admission to VIP packages, tailored to meet the diverse preferences of fans.",
+      "2": "The collaborative effort between the Saudi Automobile & Motorcycle Federation and the website developers demonstrates the convergence of sporting excellence and cutting-edge technology. This endeavor showcases how advancements in web development and design can enhance the overall spectator experience. By merging the excitement of motorsports with the convenience of online ticketing and the engagement of interactive seating selection, the Saudi MotorSports WTCR Race website epitomizes the future of sporting event management.",
+      "3": "The launch of the Saudi MotorSports WTCR Race website marks an exciting chapter in the history of motorsports, where the fusion of sport and technology creates an unparalleled experience for fans. As racing enthusiasts eagerly prepare for the highly anticipated WTCR event, they can now navigate the exhilarating world of motorsports with a few clicks, secure their desired tickets, and choose their prime viewing spots within the circuit. With the Saudi Automobile & Motorcycle Federation leading the way, the future of motorsports has never looked more promising, dynamic, and interactive."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
   }
 }

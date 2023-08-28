@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion';
 import { Reveal } from 'ui/animations';
 import Section from '../common/section';
 import { useTranslation } from '../../i18n/client';
@@ -13,6 +13,12 @@ type Props = {
 };
 
 const DUMMY = [
+  {
+    project: 'wtcr',
+    slug: 'saudi-motorsports-wtcr-race',
+    description: [1, 2, 3],
+    image: '/images/wtcr/thumbnail.png',
+  },
   {
     project: 'neom',
     slug: 'neom-the-line-exhibition',
@@ -38,8 +44,8 @@ const Projects = ({ lang }: Props) => {
   }, []);
 
   return (
-    <Section className='py-12' id='projects'>
-      <h2 className='text-center'>{t('home:recent_projects')}</h2>
+    <Section className='space-y-6 py-12' id='projects'>
+      <h2 className='text-center text-4xl font-bold'>{t('home:recent_projects')}</h2>
       <div className='relative'>
         {/* Monitor */}
         <div className='sticky top-10 -z-10 hidden w-full lg:block'>
@@ -53,30 +59,48 @@ const Projects = ({ lang }: Props) => {
             >
               <Image
                 alt=''
-                className='relative z-10'
+                className='relative z-20'
                 height={700}
                 src='/images/frame.png'
                 width={800}
               />
-              <Image
-                alt={t(`projects:${DUMMY[inView].project}.title`)}
-                className='mx-auto h-full max-h-[80%] max-w-[94%] overflow-y-auto object-contain'
-                fill
-                sizes='(max-width: 1024px) 100vw, 800px'
-                src={DUMMY[inView].image}
-              />
+              <AnimatePresence>
+                <motion.div
+                  animate={{ top: '0%', opacity: 1 }}
+                  className='absolute left-0 top-0 z-10 h-full w-full !overflow-hidden'
+                  exit={{ top: '-15%', opacity: 0 }}
+                  initial={{ top: '15%', opacity: 0 }}
+                  key={inView}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Image
+                    alt={t(`projects:${DUMMY[inView].project}.title`)}
+                    className='mx-auto h-full max-h-[80%] max-w-[94%] overflow-y-auto object-contain'
+                    fill
+                    sizes='(max-width: 1024px) 100vw, 800px'
+                    src={DUMMY[inView].image}
+                  />
+                </motion.div>
+              </AnimatePresence>
             </motion.div>
           </div>
         </div>
         {/* List */}
         {DUMMY.map((p, i) => (
           <div
-            className={`flex flex-col items-center gap-6
+            className={`flex flex-col items-center gap-6 pb-10 lg:pb-2
             ${i % 2 > 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
             key={p.project}
           >
+            <Image
+              alt={t(`projects:${p.project}.title`)}
+              className='lg:hidden'
+              height={300}
+              src={p.image}
+              width={800}
+            />
             <Reveal
-              className='flex-1 space-y-2 py-52'
+              className='flex-1 space-y-2 lg:py-52'
               direction='bottom'
               lang={lang}
               onViewportEnter={() => {
@@ -92,11 +116,7 @@ const Projects = ({ lang }: Props) => {
               threshold={0.7}
             >
               <h3 className='text-2xl font-semibold'>{t(`projects:${p.project}.title`)}</h3>
-              {p.description.slice(0, 2).map((d) => (
-                <p className='text-lg' key={d}>
-                  {t(`projects:${p.project}.description.${d}`)}
-                </p>
-              ))}
+              <p className='line-clamp-4 text-lg'>{t(`projects:${p.project}.description.1`)}</p>
 
               <div className='flex flex-wrap gap-4 py-2'>
                 {t(`projects:${p.project}.technologies`)

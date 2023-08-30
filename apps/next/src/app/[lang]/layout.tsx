@@ -6,8 +6,8 @@ import Layout from '@/components/layout';
 import { languages } from '../../i18n/settings';
 import { homeMetadata } from '../../util/seo/metadata';
 import { cairoFont } from '../../util/fonts';
-import '@/styles/globals.css';
 import 'ui/styles.css';
+import '@/styles/globals.css';
 
 export const generateMetadata = ({ params }: NextPageProps): Promise<Metadata> => {
   return homeMetadata(params.lang);

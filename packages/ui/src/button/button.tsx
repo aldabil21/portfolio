@@ -17,16 +17,17 @@ type Props<C extends React.ElementType = 'button'> = ComponentProps<C> & HTMLAtt
 
 const SOLID: Record<ButtonTheme, string> = {
   primary:
-    'ui-bg-primary hover:ui-bg-primary-light active:ui-bg-primary-dark ui-ring-primary ui-text-primary-contrast',
+    'ui-bg-primary enabled:hover:ui-bg-primary-light enabled:active:ui-bg-primary-dark ui-ring-primary ui-text-primary-contrast disabled:ui-bg-primary/10',
   secondary:
-    'ui-bg-secondary hover:ui-bg-secondary-light active:ui-bg-secondary-dark ui-ring-secondary ui-text-secondary-contrast',
+    'ui-bg-secondary enabled:hover:ui-bg-secondary-light enabled:active:ui-bg-secondary-dark ui-ring-secondary ui-text-secondary-contrast disabled:ui-bg-secondary/30',
   tertiary:
-    'ui-bg-tertiary hover:ui-bg-tertiary-light active:ui-bg-tertiary-dark ui-ring-tertiary ui-text-tertiary-contrast',
+    'ui-bg-tertiary enabled:hover:ui-bg-tertiary-light enabled:active:ui-bg-tertiary-dark ui-ring-tertiary ui-text-tertiary-contrast',
   error:
-    'ui-bg-error hover:ui-bg-error-light active:ui-bg-error-dark ui-ring-error ui-text-error-contrast',
+    'ui-bg-error enabled:hover:ui-bg-error-light enabled:active:ui-bg-error-dark ui-ring-error ui-text-error-contrast',
   success:
-    'ui-bg-success hover:ui-bg-success-light active:ui-bg-success-dark ui-ring-success ui-text-success-contrast',
-  white: 'ui-bg-white hover:ui-bg-white active:ui-bg-white-dark ui-ring-white ui-text-black',
+    'ui-bg-success enabled:hover:ui-bg-success-light enabled:active:ui-bg-success-dark ui-ring-success ui-text-success-contrast',
+  white:
+    'ui-bg-white enabled:hover:ui-bg-white enabled:active:ui-bg-white-dark ui-ring-white ui-text-black',
 };
 
 const OUTLINED: Record<ButtonTheme, string> = {
@@ -46,16 +47,17 @@ const OUTLINED: Record<ButtonTheme, string> = {
 
 const TEXT: Record<ButtonTheme, string> = {
   primary:
-    'hover:ui-bg-primary-light/5 active:ui-bg-primary-light/5 ui-ring-primary ui-text-primary',
+    'hover:ui-bg-primary-light/5 enabled:active:ui-bg-primary-light/5 ui-ring-primary ui-text-primary',
   secondary:
-    'hover:ui-bg-secondary-light/5 active:ui-bg-secondary-light/5 ui-ring-secondary ui-text-secondary',
+    'hover:ui-bg-secondary-light/5 enabled:active:ui-bg-secondary-light/5 ui-ring-secondary ui-text-secondary',
   tertiary:
-    'hover:ui-bg-tertiary-light/5 active:ui-bg-tertiary-light/5 ui-ring-tertiary ui-text-tertiary',
-  error: 'hover:ui-bg-error-light/5 active:ui-bg-error-light/5 ui-ring-error ui-text-error-dark',
+    'hover:ui-bg-tertiary-light/5 enabled:active:ui-bg-tertiary-light/5 ui-ring-tertiary ui-text-tertiary',
+  error:
+    'hover:ui-bg-error-light/5 enabled:active:ui-bg-error-light/5 ui-ring-error ui-text-error-dark',
   success:
-    'hover:ui-bg-success-light/5 active:ui-bg-success-light/5 ui-ring-success ui-text-success-dark',
+    'hover:ui-bg-success-light/5 enabled:active:ui-bg-success-light/5 ui-ring-success ui-text-success-dark',
   white:
-    'ui-text-text ui-ring-black dark:hover:ui-bg-white/5 dark:active:ui-bg-white/5 dark:ui-ring-white hover:ui-bg-black/5 active:ui-bg-black/5 ',
+    'ui-text-text ui-ring-black dark:hover:ui-bg-white/5 dark:enabled:active:ui-bg-white/5 dark:ui-ring-white hover:ui-bg-black/5 enabled:active:ui-bg-black/5 ',
 };
 
 function MainButton<C extends React.ElementType>(

@@ -7,37 +7,11 @@ import Section from '../common/section';
 import { useTranslation } from '../../i18n/client';
 import Button from '../button';
 import Link from 'next/link';
+import { projectsList } from 'utils/projects';
 
 type Props = {
   lang: Languages;
 };
-
-const DUMMY = [
-  {
-    project: 'saudicup',
-    slug: 'the-saudi-cup-2023',
-    description: [1, 2],
-    image: '/images/saudicup/thumbnail.png',
-  },
-  {
-    project: 'diriyah',
-    slug: 'diriyah-season-2023',
-    description: [1, 2, 3],
-    image: '/images/diriyah/thumbnail.png',
-  },
-  {
-    project: 'wtcr',
-    slug: 'saudi-motorsports-wtcr-race',
-    description: [1, 2, 3],
-    image: '/images/wtcr/thumbnail.png',
-  },
-  {
-    project: 'neom',
-    slug: 'neom-the-line-exhibition',
-    description: [1, 2],
-    image: '/images/neom/thumbnail.png',
-  },
-];
 
 const Projects = ({ lang }: Props) => {
   const { t } = useTranslation(lang, ['projects', 'home']);
@@ -86,11 +60,11 @@ const Projects = ({ lang }: Props) => {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    alt={t(`projects:${DUMMY[inView].project}.title`)}
+                    alt={t(`projects:${projectsList[inView].project}.title`)}
                     className='mx-auto h-full max-h-[80%] max-w-[94%] overflow-y-auto object-contain'
                     fill
                     sizes='(max-width: 1024px) 100vw, 800px'
-                    src={DUMMY[inView].image}
+                    src={projectsList[inView].thumbnail}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -98,19 +72,12 @@ const Projects = ({ lang }: Props) => {
           </div>
         </div>
         {/* List */}
-        {DUMMY.map((p, i) => (
+        {projectsList.map((p, i) => (
           <div
             className={`flex flex-col items-center gap-6 pb-10 lg:pb-2
             ${i % 2 > 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
             key={p.project}
           >
-            <Image
-              alt={t(`projects:${p.project}.title`)}
-              className='lg:hidden'
-              height={300}
-              src={p.image}
-              width={800}
-            />
             <Reveal
               className='flex-1 space-y-2 lg:py-52'
               direction='bottom'
@@ -127,6 +94,13 @@ const Projects = ({ lang }: Props) => {
               once={false}
               threshold={0.7}
             >
+              <Image
+                alt={t(`projects:${p.project}.title`)}
+                className='pb-6 lg:hidden'
+                height={300}
+                src={p.thumbnail}
+                width={800}
+              />
               <h3 className='text-2xl font-semibold'>{t(`projects:${p.project}.title`)}</h3>
               <p className='line-clamp-4 text-lg'>{t(`projects:${p.project}.description.1`)}</p>
 

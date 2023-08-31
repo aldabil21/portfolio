@@ -11,9 +11,10 @@ import { projectsList } from 'utils/projects';
 
 type Props = {
   lang: Languages;
+  title?: string;
 };
 
-const Projects = ({ lang }: Props) => {
+const Projects = ({ lang, title }: Props) => {
   const { t } = useTranslation(lang, ['projects', 'home']);
   const [inView, setInView] = useState(0);
   const rotateY = useMotionValue(0);
@@ -31,7 +32,7 @@ const Projects = ({ lang }: Props) => {
 
   return (
     <Section className='space-y-6 py-12' id='projects'>
-      <h2 className='text-center text-4xl font-bold'>{t('home:recent_projects')}</h2>
+      <h2 className='text-center text-4xl font-bold'>{title || t('home:recent_projects')}</h2>
       <div className='relative'>
         {/* Monitor */}
         <div className='sticky top-10 -z-10 hidden w-full lg:block'>

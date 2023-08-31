@@ -1,12 +1,14 @@
 export const globalJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Whitelabel',
+  '@type': 'Person',
+  name: 'Abdulraoof Aldabil',
+  jobTitle: 'Senior Software Engineer',
+  telephone: '+966 50 748 7620',
   image: (process.env.NEXT_PUBLIC_BASE_URL || '') + '/images/default-cover.jpg',
-  url: 'https://whitelabel.com',
+  url: 'https://aldabil.me',
   sameAs: [
-    'https://twitter.com/whitelabel',
-    'https://www.instagram.com/whitelabel',
-    'https://www.facebook.com/whitelabel',
+    'https://twitter.com/aldabil21',
+    'https://linkedin.com/in/aldabil',
+    'https://github.com/aldabil21',
   ],
 };

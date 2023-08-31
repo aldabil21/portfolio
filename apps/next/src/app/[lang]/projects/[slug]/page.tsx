@@ -6,6 +6,8 @@ import { ExternalLinkIcon } from 'ui/icons';
 import { getTranslation } from '../../../../i18n';
 import Button from '@/components/button';
 import Image from 'next/image';
+import { projectMetadata } from '../../../../util/seo/metadata';
+import { Breadcrumb } from '../../../../components/common/breadcrumb';
 
 const getProject = (slug: string) => {
   const project = projectsList.find((p) => p.slug === slug);
@@ -15,7 +17,14 @@ const getProject = (slug: string) => {
   return project;
 };
 
-export const metadata: Metadata = {};
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { lang: Languages; slug: string };
+}): Promise<Metadata> => {
+  const project = getProject(params.slug);
+  return projectMetadata(params.lang, project);
+};
 
 const page: NextPage<{ params: { slug: string } }> = async ({ params }) => {
   const project = getProject(params.slug);
@@ -24,6 +33,15 @@ const page: NextPage<{ params: { slug: string } }> = async ({ params }) => {
   return (
     <div className='grid grid-cols-1 gap-4 px-4 lg:grid-cols-2 lg:px-0'>
       <section className='container max-w-xl py-10'>
+        <Breadcrumb
+          items={[
+            { title: t('home'), link: '/' },
+            { title: t('projects'), link: '/projects' },
+            { title: t(`projects:${project.project}.title`), link: '#' },
+          ]}
+          lang={params.lang}
+        />
+
         <div className='sticky top-10 space-y-6'>
           <h1 className=''>{t(`projects:${project.project}.title`)}</h1>
           <Button

@@ -39,5 +39,14 @@
       "3": "Understanding that each attendee's preferences are unique, the ticketing platform incorporated features for personalized experiences. Attendees could customize their packages, selecting from a range of options such as VIP access, hospitality suites, and exclusive event merchandise. This personalization not only added value but also created a sense of exclusivity for attendees."
     },
     "technologies": "React,Next.js,TailwindCSS"
+  },
+  "sagp": {
+    "title": "Formula 1 SAGP 2023",
+    "subtitle": "",
+    "description": {
+      "1": "The Formula 1 SAGP 2023 ticketing website isn't just about securing seats; it's about offering a comprehensive and exclusive experience for fans. The website boasts an array of perks that enhance the overall package for ticket holders. From priority access to autograph sessions and meet-and-greets with drivers to behind-the-scenes glimpses into the inner workings of a Formula 1 team, the perks cater to both die-hard fans and those new to the world of racing.",
+      "2": "The parking pass feature allows users to select from various parking areas, view proximity to their chosen seating sections, and even explore recommended routes to reach the circuit. By streamlining the parking process, the website aims to minimize pre-event worries, letting fans focus solely on the excitement that awaits them."
+    },
+    "technologies": "React,Next.js,TailwindCSS,SVG Animations"
   }
 }

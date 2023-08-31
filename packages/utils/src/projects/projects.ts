@@ -9,6 +9,14 @@ export type Project = {
 
 export const projectsList: Project[] = [
   {
+    project: 'sagp',
+    slug: 'formula-1-sagp-2023',
+    description: [1, 2],
+    thumbnail: '/images/sagp/thumbnail.png',
+    numberOfImages: 6,
+    live: 'https://tickets.saudiarabiangp.com',
+  },
+  {
     project: 'saudicup',
     slug: 'the-saudi-cup-2023',
     description: [1, 2],

@@ -43,7 +43,7 @@ const Projects = ({ lang, title }: Props) => {
         <div className='sticky top-10 -z-10 hidden w-full lg:block'>
           <div className='absolute w-full'>
             <motion.div
-              className='relative inline-block h-full max-h-[700px] w-[50%] max-w-[800px] overflow-hidden'
+              className='relative inline-block h-full max-h-[700px] w-[50%] max-w-[800px]'
               layout
               layoutId='image'
               style={{
@@ -61,6 +61,11 @@ const Projects = ({ lang, title }: Props) => {
                 src='/images/frame.png'
                 width={800}
               />
+              <div
+                className='bg-gradient-radial from-secondary/20 absolute inset-x-0 -bottom-1/4 z-10
+              mx-auto h-36 w-full rounded-full via-transparent to-transparent xl:-bottom-[20%]'
+              />
+              {/* via-transparent to-transparent */}
               <AnimatePresence>
                 <motion.div
                   animate={{ top: '0%', opacity: 1 }}

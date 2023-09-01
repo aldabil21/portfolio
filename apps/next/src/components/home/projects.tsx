@@ -54,36 +54,37 @@ const Projects = ({ lang, title }: Props) => {
               }}
               transformTemplate={(_, transform) => `perspective(2000px) ${transform}`}
             >
-              <Image
-                alt=''
-                className='relative z-20'
-                height={700}
-                src='/images/frame.png'
-                width={800}
-              />
               <div
                 className='bg-gradient-radial from-secondary/20 absolute inset-x-0 -bottom-1/4 z-10
               mx-auto h-36 w-full rounded-full via-transparent to-transparent xl:-bottom-[20%]'
               />
-              {/* via-transparent to-transparent */}
-              <AnimatePresence>
-                <motion.div
-                  animate={{ top: '0%', opacity: 1 }}
-                  className='absolute z-10 h-full w-full overflow-hidden'
-                  exit={{ top: '-15%', opacity: 0 }}
-                  initial={{ top: '15%', opacity: 0 }}
-                  key={inView}
-                  transition={{ duration: 0.3 }}
-                >
-                  <Image
-                    alt={t(`projects:${projectsList[inView].project}.title`)}
-                    className='mx-auto h-full max-h-[80%] max-w-[94%] object-contain'
-                    fill
-                    sizes='(max-width: 1024px) 100vw, 800px'
-                    src={projectsList[inView].thumbnail}
-                  />
-                </motion.div>
-              </AnimatePresence>
+              <div className='relative overflow-hidden'>
+                <Image
+                  alt=''
+                  className='relative z-20'
+                  height={700}
+                  src='/images/frame.png'
+                  width={800}
+                />
+                <AnimatePresence>
+                  <motion.div
+                    animate={{ top: '0%', opacity: 1 }}
+                    className='absolute z-10 h-full w-full overflow-hidden'
+                    exit={{ top: '-15%', opacity: 0 }}
+                    initial={{ top: '15%', opacity: 0 }}
+                    key={inView}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Image
+                      alt={t(`projects:${projectsList[inView].project}.title`)}
+                      className='mx-auto h-full max-h-[80%] max-w-[94%] object-contain'
+                      fill
+                      sizes='(max-width: 1024px) 100vw, 800px'
+                      src={projectsList[inView].thumbnail}
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </motion.div>
           </div>
         </div>

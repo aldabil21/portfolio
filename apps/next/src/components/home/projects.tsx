@@ -18,14 +18,19 @@ const Projects = ({ lang, title }: Props) => {
   const { t } = useTranslation(lang, ['projects', 'home']);
   const [inView, setInView] = useState(0);
   const rotateY = useMotionValue(0);
+  const rotateX = useMotionValue(5);
+  const rotateZ = useMotionValue(5);
   const left = useSpring('0' as unknown as never, {
     stiffness: 100,
     damping: 15,
   });
-  const ROTATE = lang === 'ar' ? -30 : 30;
+  const ROTATE = lang === 'ar' ? 30 : -30;
+  const ANGLE = lang === 'ar' ? 3 : -3;
 
   useEffect(() => {
-    rotateY.set(-ROTATE);
+    rotateY.set(ROTATE);
+    rotateX.set(ANGLE);
+    rotateZ.set(ANGLE);
     left.set(lang === 'ar' ? '-50%' : '50%');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -41,7 +46,12 @@ const Projects = ({ lang, title }: Props) => {
               className='relative inline-block h-full max-h-[700px] w-[50%] max-w-[800px] overflow-hidden'
               layout
               layoutId='image'
-              style={{ rotateY, left }}
+              style={{
+                rotateY,
+                left,
+                rotateX,
+                rotateZ,
+              }}
               transformTemplate={(_, transform) => `perspective(2000px) ${transform}`}
             >
               <Image
@@ -54,7 +64,7 @@ const Projects = ({ lang, title }: Props) => {
               <AnimatePresence>
                 <motion.div
                   animate={{ top: '0%', opacity: 1 }}
-                  className='absolute left-0 top-0 z-10 h-full w-full !overflow-hidden'
+                  className='absolute z-10 h-full w-full overflow-hidden'
                   exit={{ top: '-15%', opacity: 0 }}
                   initial={{ top: '15%', opacity: 0 }}
                   key={inView}
@@ -62,7 +72,7 @@ const Projects = ({ lang, title }: Props) => {
                 >
                   <Image
                     alt={t(`projects:${projectsList[inView].project}.title`)}
-                    className='mx-auto h-full max-h-[80%] max-w-[94%] overflow-y-auto object-contain'
+                    className='mx-auto h-full max-h-[80%] max-w-[94%] object-contain'
                     fill
                     sizes='(max-width: 1024px) 100vw, 800px'
                     src={projectsList[inView].thumbnail}
@@ -85,7 +95,9 @@ const Projects = ({ lang, title }: Props) => {
               lang={lang}
               onViewportEnter={() => {
                 setInView(i);
-                rotateY.set(i % 2 === 0 ? -ROTATE : ROTATE);
+                rotateY.set(i % 2 === 0 ? ROTATE : -ROTATE);
+                rotateX.set(i % 2 === 0 ? -ANGLE : 0);
+                rotateZ.set(i % 2 === 0 ? -ANGLE : ANGLE);
                 if (lang === 'ar') {
                   left.set(i % 2 === 0 ? '-50%' : '0%');
                 } else {

@@ -3,6 +3,10 @@
   "globalDependencies": ["**/.env.development"],
   "globalEnv": ["NEXT_PUBLIC_ENV", "NEXT_PUBLIC_BASE_URL"],
   "pipeline": {
+    "start": {
+      "dependsOn": ["^start"],
+      "dotEnv": [".env.development", ".env"]
+    },
     "build": {
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"],

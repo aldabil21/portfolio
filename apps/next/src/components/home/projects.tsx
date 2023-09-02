@@ -29,9 +29,9 @@ const Projects = ({ lang, title }: Props) => {
 
   useEffect(() => {
     rotateY.set(ROTATE);
-    rotateX.set(ANGLE);
-    rotateZ.set(ANGLE);
-    left.set(lang === 'ar' ? '-50%' : '50%');
+    rotateX.set(-ANGLE);
+    rotateZ.set(-ANGLE);
+    left.set(lang === 'ar' ? '-48%' : '48%');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -105,9 +105,9 @@ const Projects = ({ lang, title }: Props) => {
                 rotateX.set(i % 2 === 0 ? -ANGLE : 0);
                 rotateZ.set(i % 2 === 0 ? -ANGLE : ANGLE);
                 if (lang === 'ar') {
-                  left.set(i % 2 === 0 ? '-50%' : '0%');
+                  left.set(i % 2 === 0 ? '-48%' : '0%');
                 } else {
-                  left.set(i % 2 === 0 ? '50%' : '0%');
+                  left.set(i % 2 === 0 ? '48%' : '0%');
                 }
               }}
               once={false}

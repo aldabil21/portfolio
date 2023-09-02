@@ -30,7 +30,7 @@ const LangRootLayout: NextLayout<{ auth: React.ReactNode }> = ({ children, param
         />
       </head>
       <body className={`${cairoFont.variable} bg-body font-cairo text-text`}>
-        <Layout>{children}</Layout>
+        <Layout lang={lang}>{children}</Layout>
       </body>
     </html>
   );

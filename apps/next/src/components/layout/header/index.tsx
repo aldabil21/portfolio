@@ -1,9 +1,17 @@
 import ThemeSwitcher from '@/components/common/theme-switcher';
+import Link from 'next/link';
+import LogoFace from './logo';
 
-const Header = () => {
+type Props = {
+  lang: string;
+};
+
+const Header = ({ lang }: Props) => {
   return (
     <header className='container flex items-center justify-between p-4'>
-      <div>Header</div>
+      <Link href={`/${lang}`}>
+        <LogoFace />
+      </Link>
 
       <ul>
         <li>

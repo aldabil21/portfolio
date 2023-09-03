@@ -17,47 +17,43 @@ type Props<C extends React.ElementType = 'button'> = ComponentProps<C> & HTMLAtt
 
 const SOLID: Record<ButtonTheme, string> = {
   primary:
-    'ui-bg-primary enabled:hover:ui-bg-primary-light enabled:active:ui-bg-primary-dark ui-ring-primary ui-text-primary-contrast disabled:ui-bg-primary/10',
+    'bg-primary enabled:hover:bg-primary-light enabled:active:bg-primary-dark ring-primary text-primary-contrast disabled:bg-primary/10',
   secondary:
-    'ui-bg-secondary enabled:hover:ui-bg-secondary-light enabled:active:ui-bg-secondary-dark ui-ring-secondary ui-text-secondary-contrast disabled:ui-bg-secondary/30',
+    'bg-secondary enabled:hover:bg-secondary-light enabled:active:bg-secondary-dark ring-secondary text-secondary-contrast disabled:bg-secondary/30',
   tertiary:
-    'ui-bg-tertiary enabled:hover:ui-bg-tertiary-light enabled:active:ui-bg-tertiary-dark ui-ring-tertiary ui-text-tertiary-contrast',
+    'bg-tertiary enabled:hover:bg-tertiary-light enabled:active:bg-tertiary-dark ring-tertiary text-tertiary-contrast',
   error:
-    'ui-bg-error enabled:hover:ui-bg-error-light enabled:active:ui-bg-error-dark ui-ring-error ui-text-error-contrast',
+    'bg-error enabled:hover:bg-error-light enabled:active:bg-error-dark ring-error text-error-contrast',
   success:
-    'ui-bg-success enabled:hover:ui-bg-success-light enabled:active:ui-bg-success-dark ui-ring-success ui-text-success-contrast',
-  white:
-    'ui-bg-white enabled:hover:ui-bg-white enabled:active:ui-bg-white-dark ui-ring-white ui-text-black',
+    'bg-success enabled:hover:bg-success-light enabled:active:bg-success-dark ring-success text-success-contrast',
+  white: 'bg-white enabled:hover:bg-white enabled:active:bg-white-dark ring-white text-black',
 };
 
 const OUTLINED: Record<ButtonTheme, string> = {
-  primary: `ui-border-primary active:ui-bg-primary-light/20 ui-ring-primary ui-text-primary 
-  ui-shadow-[inset_0_0_10px_rgb(var(--color-primary))] hover:ui-shadow-[inset_0_0_20px_0_rgb(var(--color-primary)/10)]`,
-  secondary: `ui-border-secondary hover:ui-bg-secondary-light/5 active:ui-bg-secondary-light/10 ui-ring-secondary ui-text-secondary
-  ui-shadow-[inset_0_0_10px_rgb(var(--color-secondary))] hover:ui-shadow-[inset_0_0_20px_0_rgb(var(--color-secondary)/10)]`,
-  tertiary: `ui-border-tertiary hover:ui-bg-tertiary-light/5 active:ui-bg-tertiary-light/10 ui-ring-tertiary ui-text-tertiary-contrast
-  ui-shadow-[inset_0_0_10px_rgb(var(--color-tertiary))] hover:ui-shadow-[inset_0_0_20px_0_rgb(var(--color-tertiary)/10)]`,
-  error:
-    'ui-border-error hover:ui-bg-error-light/5 active:ui-bg-error-light/10 ui-ring-error ui-text-error-dark',
+  primary: `border-primary active:bg-primary-light/20 ring-primary text-primary 
+  shadow-[inset_0_0_10px_rgb(var(--color-primary))] hover:shadow-[inset_0_0_20px_0_rgb(var(--color-primary)/10)]`,
+  secondary: `border-secondary hover:bg-secondary-light/5 active:bg-secondary-light/10 ring-secondary text-secondary
+  shadow-[inset_0_0_10px_rgb(var(--color-secondary))] hover:shadow-[inset_0_0_20px_0_rgb(var(--color-secondary)/10)]`,
+  tertiary: `border-tertiary hover:bg-tertiary-light/5 active:bg-tertiary-light/10 ring-tertiary text-tertiary-contrast
+  shadow-[inset_0_0_10px_rgb(var(--color-tertiary))] hover:shadow-[inset_0_0_20px_0_rgb(var(--color-tertiary)/10)]`,
+  error: 'border-error hover:bg-error-light/5 active:bg-error-light/10 ring-error text-error-dark',
   success:
-    'ui-border-success hover:ui-bg-success-light/5 active:ui-bg-success-light/10 ui-ring-success ui-text-success-dark',
-  white: `dark:ui-border-white ui-border-black hover:ui-bg-black/5 dark:hover:ui-bg-white/5 active:ui-bg-black/10 dark:active:ui-bg-white/10 ui-ring-black dark:ui-ring-white
-  ui-text-black dark:ui-text-white ui-shadow-[inset_0_0_10px_rgb(255,255,255)] hover:ui-shadow-[inset_0_0_20px_0_rgb(255,255,255,0.1)]`,
+    'border-success hover:bg-success-light/5 active:bg-success-light/10 ring-success text-success-dark',
+  white: `dark:border-white border-black hover:bg-black/5 dark:hover:bg-white/5 active:bg-black/10 dark:active:bg-white/10 ring-black dark:ring-white
+  text-black dark:text-white shadow-[inset_0_0_10px_rgb(255,255,255)] hover:shadow-[inset_0_0_20px_0_rgb(255,255,255,0.1)]`,
 };
 
 const TEXT: Record<ButtonTheme, string> = {
-  primary:
-    'hover:ui-bg-primary-light/5 enabled:active:ui-bg-primary-light/5 ui-ring-primary ui-text-primary',
+  primary: 'hover:bg-primary-light/5 enabled:active:bg-primary-light/5 ring-primary text-primary',
   secondary:
-    'hover:ui-bg-secondary-light/5 enabled:active:ui-bg-secondary-light/5 ui-ring-secondary ui-text-secondary',
+    'hover:bg-secondary-light/5 enabled:active:bg-secondary-light/5 ring-secondary text-secondary',
   tertiary:
-    'hover:ui-bg-tertiary-light/5 enabled:active:ui-bg-tertiary-light/5 ui-ring-tertiary ui-text-tertiary',
-  error:
-    'hover:ui-bg-error-light/5 enabled:active:ui-bg-error-light/5 ui-ring-error ui-text-error-dark',
+    'hover:bg-tertiary-light/5 enabled:active:bg-tertiary-light/5 ring-tertiary text-tertiary',
+  error: 'hover:bg-error-light/5 enabled:active:bg-error-light/5 ring-error text-error-dark',
   success:
-    'hover:ui-bg-success-light/5 enabled:active:ui-bg-success-light/5 ui-ring-success ui-text-success-dark',
+    'hover:bg-success-light/5 enabled:active:bg-success-light/5 ring-success text-success-dark',
   white:
-    'ui-text-text ui-ring-black dark:hover:ui-bg-white/5 dark:enabled:active:ui-bg-white/5 dark:ui-ring-white hover:ui-bg-black/5 enabled:active:ui-bg-black/5 ',
+    'text-text ring-black dark:hover:bg-white/5 dark:enabled:active:bg-white/5 dark:ring-white hover:bg-black/5 enabled:active:bg-black/5 ',
 };
 
 function MainButton<C extends React.ElementType>(
@@ -78,11 +74,11 @@ function MainButton<C extends React.ElementType>(
   const btnClasses = useMemo(() => {
     switch (shape) {
       case 'outlined':
-        return `${OUTLINED[theme]} ui-border focus:ui-ring-1`;
+        return `${OUTLINED[theme]} border focus:ring-1`;
       case 'text':
-        return `${TEXT[theme]} focus:ui-ring-1`;
+        return `${TEXT[theme]} focus:ring-1`;
       default:
-        return `${SOLID[theme]} focus:ui-ring-1 ui-ring-offset-2`;
+        return `${SOLID[theme]} focus:ring-1 ring-offset-2`;
     }
   }, [theme, shape]);
 
@@ -90,9 +86,9 @@ function MainButton<C extends React.ElementType>(
     <Component
       className={twMerge(
         btnClasses,
-        `ui-ring-offset-body ui-relative ui-inline-flex ui-items-center ui-justify-center ui-gap-1 ui-overflow-hidden ui-px-6 ui-py-2
-        ui-text-center ui-transition-all ui-duration-200 focus:ui-outline-none disabled:ui-cursor-not-allowed disabled:ui-text-gray-400`,
-        rounded ? 'ui-rounded-md' : '',
+        `ring-offset-body relative inline-flex items-center justify-center gap-1 overflow-hidden px-6 py-2
+        text-center transition-all duration-200 focus:outline-none disabled:cursor-not-allowed disabled:text-gray-400`,
+        rounded ? 'rounded-md' : '',
         className || ''
       )}
       disabled={loading || disabled}

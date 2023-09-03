@@ -1,11 +1,7 @@
-// styles
-import '../styles.css';
-
 // components
 export * from './animations';
 export * from './home';
 export * from './button';
 export * from './common';
-
-// icons
+export * from './logo';
 export * from './icons';

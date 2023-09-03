@@ -15,10 +15,10 @@ const MOTION_LINE_CONFIG: AnimationProps = {
 
 export const Cpu = () => {
   return (
-    <section className='ui-text-primary ui-relative ui-mx-auto ui-max-w-xl ui-px-4 ui-py-12 ui-drop-shadow-2xl'>
+    <section className='text-primary relative mx-auto max-w-xl px-4 py-12 drop-shadow-2xl'>
       <div
-        className='ui-shadow-primary/70 ui-absolute ui-inset-1/2 -ui-z-10 ui-h-20 ui-w-20 -ui-translate-y-1/2 ui-bg-transparent
-          ui-shadow-[0_0_150px_10px] ltr:-ui-translate-x-1/2 rtl:ui-translate-x-1/2 md:ui-h-32 md:ui-w-32'
+        className='shadow-primary/70 absolute inset-1/2 -z-10 h-20 w-20 -translate-y-1/2 bg-transparent
+          shadow-[0_0_150px_10px] ltr:-translate-x-1/2 rtl:translate-x-1/2 md:h-32 md:w-32'
       />
       <svg
         fill='none'
@@ -130,99 +130,99 @@ export const Cpu = () => {
           fill='#5F5F5F'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M460 519C461.105 519 462 518.105 462 517L462 495L451 495L451 517C451 518.105 451.895 519 453 519L460 519Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M425 519C426.105 519 427 518.105 427 517L427 495L416 495L416 517C416 518.105 416.895 519 418 519L425 519Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M390 519C391.105 519 392 518.105 392 517L392 495L381 495L381 517C381 518.105 381.895 519 383 519L390 519Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M355 519C356.105 519 357 518.105 357 517L357 495L346 495L346 517C346 518.105 346.895 519 348 519L355 519Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M320 519C321.105 519 322 518.105 322 517L322 495L311 495L311 517C311 518.105 311.895 519 313 519L320 519Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M285 519C286.105 519 287 518.105 287 517L287 495L276 495L276 517C276 518.105 276.895 519 278 519L285 519Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M278 221C276.895 221 276 221.895 276 223L276 245L287 245L287 223C287 221.895 286.105 221 285 221L278 221Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M313 221C311.895 221 311 221.895 311 223L311 245L322 245L322 223C322 221.895 321.105 221 320 221L313 221Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M348 221C346.895 221 346 221.895 346 223L346 245L357 245L357 223C357 221.895 356.105 221 355 221L348 221Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M383 221C381.895 221 381 221.895 381 223L381 245L392 245L392 223C392 221.895 391.105 221 390 221L383 221Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M418 221C416.895 221 416 221.895 416 223L416 245L427 245L427 223C427 221.895 426.105 221 425 221L418 221Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M453 221C451.895 221 451 221.895 451 223L451 245L462 245L462 223C462 221.895 461.105 221 460 221L453 221Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M518 279C518 277.895 517.105 277 516 277H494V288H516C517.105 288 518 287.105 518 286V279Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M518 314C518 312.895 517.105 312 516 312H494V323H516C517.105 323 518 322.105 518 321V314Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M518 349C518 347.895 517.105 347 516 347H494V358H516C517.105 358 518 357.105 518 356V349Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M518 384C518 382.895 517.105 382 516 382H494V393H516C517.105 393 518 392.105 518 391V384Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M518 419C518 417.895 517.105 417 516 417H494V428H516C517.105 428 518 427.105 518 426V419Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M518 454C518 452.895 517.105 452 516 452H494V463H516C517.105 463 518 462.105 518 461V454Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M220 279C220 277.895 220.895 277 222 277H244V288H222C220.895 288 220 287.105 220 286V279Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M220 314C220 312.895 220.895 312 222 312H244V323H222C220.895 323 220 322.105 220 321V314Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M220 349C220 347.895 220.895 347 222 347H244V358H222C220.895 358 220 357.105 220 356V349Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M220 384C220 382.895 220.895 382 222 382H244V393H222C220.895 393 220 392.105 220 391V384Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M220 419C220 417.895 220.895 417 222 417H244V428H222C220.895 428 220 427.105 220 426V419Z'
         />
         <path
-          className='ui-fill-zinc-500 dark:ui-fill-white'
+          className='fill-zinc-500 dark:fill-white'
           d='M220 454C220 452.895 220.895 452 222 452H244V463H222C220.895 463 220 462.105 220 461V454Z'
         />
         <g filter='url(#core)'>
@@ -254,7 +254,7 @@ export const Cpu = () => {
           fill='#00618A'
         />
         <path
-          className='ui-fill-black dark:ui-fill-white'
+          className='fill-black dark:fill-white'
           d='M644.594 265.859H663.422V267.344H646.313V278.594H662.406V280.078H646.313V292.422H663.656V293.906H644.594V265.859ZM665.141 265.859H667.172L676.078 278.203L685.062 265.859L697.406 250.234L677.094 279.531L687.562 293.906H685.453L676 280.781L666.469 293.906H664.438L674.984 279.531L665.141 265.859ZM688.344 267.344V265.859H709.828V267.344H699.906V293.906H698.188V267.344H688.344ZM621 265.859H623.109L652.953 310.234L640.609 293.906L622.797 267.969L622.719 293.906H621V265.859ZM709.672 291.953C710.062 291.953 710.297 291.719 710.297 291.328C710.297 290.938 710.062 290.703 709.672 290.703C709.281 290.703 709.047 290.938 709.047 291.328C709.047 291.719 709.359 291.953 709.672 291.953ZM711.391 290.312C711.391 291.328 712.172 292.031 713.266 292.031C714.438 292.031 715.141 291.328 715.141 290.078V285.781H714.203V290.078C714.203 290.781 713.891 291.094 713.266 291.094C712.719 291.094 712.328 290.781 712.328 290.234H711.391V290.312ZM716.312 290.234C716.391 291.328 717.25 292.031 718.656 292.031C720.062 292.031 721 291.328 721 290.156C721 289.219 720.453 288.75 719.281 288.438L718.578 288.281C717.797 288.125 717.484 287.812 717.484 287.422C717.484 286.875 717.953 286.484 718.734 286.484C719.438 286.484 719.906 286.797 719.984 287.422H720.922C720.844 286.406 719.984 285.703 718.734 285.703C717.406 285.703 716.547 286.406 716.547 287.5C716.547 288.359 717.016 288.906 718.109 289.141L718.891 289.297C719.672 289.453 720.062 289.766 720.062 290.234C720.062 290.781 719.516 291.172 718.734 291.172C717.953 291.172 717.328 290.781 717.25 290.234H716.312Z'
         />
         <path

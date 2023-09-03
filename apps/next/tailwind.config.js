@@ -1,10 +1,11 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const sharedConfig = require('tailwind-config/tailwind.config.js');
+const uiConfig = require('../../packages/ui/tailwind.config.js');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  presets: [sharedConfig],
+  presets: [uiConfig],
   darkMode: 'class',
+  content: ['./src/**/*.{js,ts,jsx,tsx}', '../../packages/ui/src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {

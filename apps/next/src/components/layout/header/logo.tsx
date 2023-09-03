@@ -1,5 +1,5 @@
 'use client';
-import { LogoFace } from 'ui/common';
+import { LogoFace } from 'ui/logo';
 
 const Logo = () => {
   return <LogoFace />;

@@ -4,7 +4,7 @@ const sharedConfig = require('tailwind-config/tailwind.config.js');
 module.exports = {
   // darkMode: 'class',
   // prefix ui lib classes to avoid conflicting with the app
-  prefix: 'ui-',
+  // prefix: '',
   presets: [sharedConfig],
   theme: {
     extend: {
@@ -13,6 +13,8 @@ module.exports = {
         'heart-beat': 'beat 0.4s cubic-bezier(0, 0, 0.2, 1) infinite',
         'dashed-line-vertical': 'dashed-line-vertical 1s cubic-bezier(0.5,0.5,0.2,1) forwards',
         'dashed-line-horizontal': 'dashed-line-horizontal 1s cubic-bezier(0.5,0.5,0.2,1) forwards',
+        'glasses-up': 'glasses-up 0.5s cubic-bezier(0.5,0.5,0.2,1) forwards',
+        'glasses-up-rtl': 'glasses-up-rtl 0.5s cubic-bezier(0.5,0.5,0.2,1) forwards',
       },
       backgroundImage: {
         'dashed-line-vertical':
@@ -49,6 +51,22 @@ module.exports = {
           '100%': {
             height: '100%',
             opacity: 0.3,
+          },
+        },
+        'glasses-up': {
+          '0%': {
+            transform: 'translate(0,0) rotateX(0deg) scale(1)',
+          },
+          '100%': {
+            transform: 'translate(9%, -4%) rotateX(40deg) scale(0.8)',
+          },
+        },
+        'glasses-up-rtl': {
+          '0%': {
+            transform: 'translate(0,0) rotateX(0deg) scale(1)',
+          },
+          '100%': {
+            transform: 'translate(9%, 4%) rotateX(40deg) scale(0.8)',
           },
         },
         beat: {

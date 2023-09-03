@@ -48,5 +48,15 @@
       "2": "The parking pass feature allows users to select from various parking areas, view proximity to their chosen seating sections, and even explore recommended routes to reach the circuit. By streamlining the parking process, the website aims to minimize pre-event worries, letting fans focus solely on the excitement that awaits them."
     },
     "technologies": "React,Next.js,TailwindCSS,SVG Animations"
+  },
+  "misk": {
+    "title": "Misk Hub",
+    "subtitle": "",
+    "description": {
+      "1": "Misk Hub offers a comprehensive set of tools that empower event organizers to create, manage, and analyze their events effortlessly. From crafting event details and managing guest lists to designing event badges and overseeing event approvals, Misk Hub is a one-stop platform designed to simplify event management.",
+      "2": "One of its standout features is the ability to customize event details, such as dates, times, and locations, ensuring that each event aligns perfectly with your unique vision. This level of customization extends to badge creation, where you can design professional badges that reflect your brand identity.",
+      "3": "In essence, Misk Hub is not just a website; it's your strategic partner in event organization. Whether you're planning a small-scale meeting or a large-scale conference, Misk Hub's user-friendly interface, robust features, and data-driven insights will elevate your event management to new heights. Say goodbye to the stress of event planning and embrace the future with Misk Hub. Your next successful event is just a click away!"
+    },
+    "technologies": "React,Next.js,Radix UI,TailwindCSS"
   }
 }

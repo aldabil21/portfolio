@@ -9,6 +9,14 @@ export type Project = {
 
 export const projectsList: Project[] = [
   {
+    project: 'misk',
+    slug: 'misk-hub-event-management',
+    description: [1, 2, 3],
+    thumbnail: '/images/misk/thumbnail.png',
+    numberOfImages: 12,
+    live: 'https://eventhub.misk.org.sa',
+  },
+  {
     project: 'sagp',
     slug: 'formula-1-sagp-2023',
     description: [1, 2],

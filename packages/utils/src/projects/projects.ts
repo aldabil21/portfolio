@@ -9,6 +9,14 @@ export type Project = {
 
 export const projectsList: Project[] = [
   {
+    project: 'afcon',
+    slug: 'africa-cup-of-nations-2023',
+    description: [1, 2, 3],
+    thumbnail: '/images/afcon/thumbnail.png',
+    numberOfImages: 5,
+    live: 'https://frmftickets.ma',
+  },
+  {
     project: 'misk',
     slug: 'misk-hub-event-management',
     description: [1, 2, 3],

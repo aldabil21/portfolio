@@ -58,5 +58,14 @@
       "3": "In essence, Misk Hub is not just a website; it's your strategic partner in event organization. Whether you're planning a small-scale meeting or a large-scale conference, Misk Hub's user-friendly interface, robust features, and data-driven insights will elevate your event management to new heights. Say goodbye to the stress of event planning and embrace the future with Misk Hub. Your next successful event is just a click away!"
     },
     "technologies": "React,Next.js,Radix UI,TailwindCSS"
+  },
+  "afcon": {
+    "title": "Africa Cup of Nations - Morocco 2023",
+    "subtitle": "",
+    "description": {
+      "1": "One of the standout features of the AFCON 2023 website is the interactive seating map, which has revolutionized how fans select their seats. Gone are the days of selecting tickets blindly. Now, fans can visually explore the stadium layout, view available seats in real-time, and choose their preferred spots. This feature not only enhances the overall user experience but also allows fans to make informed decisions based on their preferences, ensuring that they enjoy the tournament from their ideal vantage point.",
+      "2": "Anticipating the high demand for AFCON 2023 tickets, the website introduces a secure queue system for ticket purchasing. This innovative approach prevents website crashes due to excessive traffic and ensures a fair and orderly ticket distribution process. Fans enter the virtual queue and patiently await their turn, knowing that the system is designed to accommodate the massive influx of users without compromising security or performance."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
   }
 }

@@ -15,6 +15,7 @@ module.exports = {
         'dashed-line-horizontal': 'dashed-line-horizontal 1s cubic-bezier(0.5,0.5,0.2,1) forwards',
         'glasses-up': 'glasses-up 0.5s cubic-bezier(0.5,0.5,0.2,1) forwards',
         'glasses-up-rtl': 'glasses-up-rtl 0.5s cubic-bezier(0.5,0.5,0.2,1) forwards',
+        'card-gradient': 'card-gradient 8s linear infinite',
       },
       backgroundImage: {
         'dashed-line-vertical':
@@ -27,6 +28,17 @@ module.exports = {
         'dashed-line-horizontal': '12px 1px',
       },
       keyframes: {
+        'card-gradient': {
+          '0%': {
+            backgroundPosition: '0% 50%',
+          },
+          '50%': {
+            backgroundPosition: '100% 50%',
+          },
+          '100%': {
+            backgroundPosition: '0% 50%',
+          },
+        },
         'dashed-line-horizontal': {
           '0%': {
             width: 0,

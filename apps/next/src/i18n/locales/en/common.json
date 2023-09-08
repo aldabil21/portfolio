@@ -4,6 +4,16 @@
   "ar": "العربية",
   "home": "Home",
   "projects": "Projects",
+  "all_projects": "All Projects",
+  "help": {
+    "title": "What I can help you with?",
+    "technical": "Technical Expertise",
+    "technical_desc": "Help in choosing and implementing the right technology for your project, optimizing perfrmance, scalability, and maintainability. As a senior web developer with rich experience in ecommerce, social media, and web applications, I can help you make your ideas become true!",
+    "project": "Project Coordination & Planning",
+    "project_desc": "collaborate to understand project requirements abd creating a roadmap for front-end development. Estimates of the time and resources required for front-end development. Anticipate potential project risks and devise contingency plans to keep front-end development on track",
+    "continuous": "Continuous Improvement",
+    "continuous_desc": "Analyze website data to identify opportunities for continuous front-end improvement, enhancing the website's relevance and effectiveness. Stay up-to-date with the latest front-end development trends and technologies. Provide training and guidance to the internal front-end teams"
+  },
   "seo": {
     "title": "Senior Web Developer | Abdulraoof Aldabil",
     "description": "I'm a Senior web developer, Javascript developer, and fullstack web developer, I can help you make your ideas become true!",

@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion';
 import { Reveal } from 'ui/animations';
@@ -12,9 +12,10 @@ import { projectsList } from 'utils/projects';
 type Props = {
   lang: Languages;
   title?: string;
+  limit?: number;
 };
 
-const Projects = ({ lang, title }: Props) => {
+const Projects = ({ lang, title, limit }: Props) => {
   const { t } = useTranslation(lang, ['projects', 'home']);
   const [inView, setInView] = useState(0);
   const ROTATE = lang === 'ar' ? 30 : -30;
@@ -35,13 +36,17 @@ const Projects = ({ lang, title }: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const projects = useMemo(() => {
+    return projectsList.slice(0, limit || projectsList.length);
+  }, [limit]);
+
   return (
     <Section className='space-y-6 py-12' id='projects'>
       <h2 className='text-center text-4xl font-bold'>{title || t('home:recent_projects')}</h2>
       <div className='relative'>
         {/* Monitor */}
-        <div className='sticky top-10 -z-10 hidden w-full lg:block'>
-          <div className='absolute w-full'>
+        <div className='absolute h-full w-full'>
+          <div className='sticky top-10 -z-10 hidden w-full lg:block'>
             <motion.div
               className='relative inline-block h-full max-h-[700px] w-[50%] max-w-[800px]'
               layout
@@ -89,7 +94,7 @@ const Projects = ({ lang, title }: Props) => {
           </div>
         </div>
         {/* List */}
-        {projectsList.map((p, i) => (
+        {projects.map((p, i) => (
           <div
             className={`flex flex-col items-center gap-6 pb-10 lg:pb-2
             ${i % 2 > 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
@@ -148,6 +153,14 @@ const Projects = ({ lang, title }: Props) => {
           </div>
         ))}
       </div>
+
+      {Boolean(limit) && (
+        <div className='py-6 text-center'>
+          <Button as={Link} className='w-full max-w-xs text-lg' href={`/${lang}/projects`}>
+            {t('all_projects')}
+          </Button>
+        </div>
+      )}
     </Section>
   );
 };

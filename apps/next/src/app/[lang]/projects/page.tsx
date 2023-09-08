@@ -5,6 +5,7 @@ import { Breadcrumb } from '@/components/common/breadcrumb';
 import Projects from '@/components/home/projects';
 import { getTranslation } from '../../../i18n';
 import { hrefLangAlternates } from '../../../util/seo/alternates';
+import WhatCanIHelpYouWith from '@/components/common/help-with';
 
 export const generateMetadata = async ({
   params,
@@ -38,6 +39,8 @@ const page: NextPage<{ params: { slug: string } }> = async ({ params }) => {
       </Section>
 
       <Projects lang={params.lang} title=' ' />
+
+      <WhatCanIHelpYouWith lang={params.lang} />
     </>
   );
 };

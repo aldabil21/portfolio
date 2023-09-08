@@ -17,15 +17,15 @@ type Props = {
 const Projects = ({ lang, title }: Props) => {
   const { t } = useTranslation(lang, ['projects', 'home']);
   const [inView, setInView] = useState(0);
-  const rotateY = useMotionValue(0);
-  const rotateX = useMotionValue(5);
-  const rotateZ = useMotionValue(5);
+  const ROTATE = lang === 'ar' ? 30 : -30;
+  const ANGLE = lang === 'ar' ? 3 : -3;
+  const rotateY = useMotionValue(ROTATE);
+  const rotateX = useMotionValue(-ANGLE);
+  const rotateZ = useMotionValue(-ANGLE);
   const left = useSpring('0' as unknown as never, {
     stiffness: 100,
     damping: 15,
   });
-  const ROTATE = lang === 'ar' ? 30 : -30;
-  const ANGLE = lang === 'ar' ? 3 : -3;
 
   useEffect(() => {
     rotateY.set(ROTATE);

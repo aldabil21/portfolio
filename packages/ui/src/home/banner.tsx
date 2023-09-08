@@ -102,7 +102,7 @@ export const HomeBanner = ({
               shape='text'
               theme='white'
             >
-              <ChevronIcon className='rtl:rotate-180' />
+              <ChevronIcon className='rotate-90' />
               <p className='px-4 text-xl'>{aboutMe}</p>
             </Button>
           </Reveal>
@@ -116,7 +116,7 @@ export const HomeBanner = ({
               shape='text'
               theme='white'
             >
-              <ChevronIcon className='rtl:rotate-180' />
+              <ChevronIcon className='rotate-90' />
               <p className='px-4 text-xl'>{recentProjects}</p>
             </Button>
           </Reveal>

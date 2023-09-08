@@ -75,7 +75,6 @@ export const LogoFace = ({ className = '' }) => {
     <motion.svg
       className={className}
       fill='none'
-      height='92'
       onHoverEnd={() => {
         setEye((prev) => {
           const newRandom = randomEye();
@@ -84,7 +83,6 @@ export const LogoFace = ({ className = '' }) => {
       }}
       viewBox='0 0 62 82'
       whileHover='up'
-      width='72'
       xmlns='http://www.w3.org/2000/svg'
     >
       {/* Eyes */}

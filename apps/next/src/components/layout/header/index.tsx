@@ -9,7 +9,7 @@ type Props = {
 
 const Header = ({ lang }: Props) => {
   return (
-    <header className='container flex items-center justify-between p-4'>
+    <header className='container relative flex items-center justify-between p-4'>
       <Link href={`/${lang}`}>
         <LogoFace />
       </Link>
@@ -18,7 +18,7 @@ const Header = ({ lang }: Props) => {
         <li>
           <LangSwitcher lang={lang} />
         </li>
-        <li>
+        <li className='w-14'>
           <ThemeSwitcher />
         </li>
       </ul>

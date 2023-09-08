@@ -5,9 +5,18 @@ export type Project = {
   thumbnail: string;
   numberOfImages: number;
   live?: string;
+  soon?: string;
 };
 
 export const projectsList: Project[] = [
+  {
+    project: 'awwal',
+    slug: 'alawwal-park-23-24-season',
+    description: [1, 2, 3],
+    thumbnail: '/images/awwal/thumbnail.png',
+    numberOfImages: 11,
+    live: 'https://tickets.victoryarena.com',
+  },
   {
     project: 'afcon',
     slug: 'africa-cup-of-nations-2023',

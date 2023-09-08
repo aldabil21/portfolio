@@ -67,5 +67,14 @@
       "2": "Anticipating the high demand for AFCON 2023 tickets, the website introduces a secure queue system for ticket purchasing. This innovative approach prevents website crashes due to excessive traffic and ensures a fair and orderly ticket distribution process. Fans enter the virtual queue and patiently await their turn, knowing that the system is designed to accommodate the massive influx of users without compromising security or performance."
     },
     "technologies": "React,Next.js,TailwindCSS"
+  },
+  "awwal": {
+    "title": "Alawwal Park - Alnassr FC season 2023/24",
+    "subtitle": "",
+    "description": {
+      "1": "The Alawwal Park - Alnassr FC Season 2023/24 website caters to all fans, whether they're committed season pass holders or casual attendees. In addition to early bird offers, the website provides convenient access to season ticket sales for those who want to catch every game. For those interested in attending specific matches, single-match tickets are also available, ensuring that everyone can be part of the excitement.",
+      "2": "With this website, Alnassr FC is committed to enhancing the fan experience, from the moment tickets are purchased to the final whistle of each match. The user-friendly interface, interactive seating maps, secure queue system, and exclusive offers demonstrate the club's dedication to creating unforgettable moments for their supporters."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
   }
 }

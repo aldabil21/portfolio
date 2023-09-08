@@ -12,7 +12,7 @@ export const projectsList: Project[] = [
   {
     project: 'awwal',
     slug: 'alawwal-park-23-24-season',
-    description: [1, 2, 3],
+    description: [1, 2],
     thumbnail: '/images/awwal/thumbnail.png',
     numberOfImages: 11,
     live: 'https://tickets.victoryarena.com',

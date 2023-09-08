@@ -1,13 +1,14 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createCookie, readCookie } from 'utils/cookie';
 
 const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState<string | null>('dark');
+  const [currentTheme, setCurrentTheme] = useState<string | null>('dark');
+  const otherTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setTheme(readCookie('theme'));
+      setCurrentTheme(readCookie('theme'));
     }
   }, []);
 
@@ -16,13 +17,15 @@ const ThemeSwitcher = () => {
     document.documentElement.classList.remove(targetTheme === 'dark' ? 'light' : 'dark');
     document.documentElement.classList.add(targetTheme);
     createCookie('theme', targetTheme, 30);
-    setTheme(targetTheme);
+    setCurrentTheme(targetTheme);
   };
 
   return (
-    <button onClick={switchTheme} type='button'>
-      {theme === 'dark' ? 'light' : 'dark'}
-    </button>
+    <div className='absolute top-0'>
+      <button aria-label={`Switch to ${otherTheme} theme`} onClick={switchTheme} type='button'>
+        {otherTheme}
+      </button>
+    </div>
   );
 };
 

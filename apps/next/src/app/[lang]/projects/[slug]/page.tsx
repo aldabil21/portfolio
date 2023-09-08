@@ -35,8 +35,8 @@ const page: NextPage<{ params: { slug: string } }> = async ({ params }) => {
       <section className='container max-w-xl py-10'>
         <Breadcrumb
           items={[
-            { title: t('home'), link: '/' },
-            { title: t('projects'), link: '/projects' },
+            { title: t('home'), link: '' },
+            { title: t('projects'), link: 'projects' },
             { title: t(`projects:${project.project}.title`), link: '#' },
           ]}
           lang={params.lang}

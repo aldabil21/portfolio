@@ -16,30 +16,29 @@ type Props = {
 export const Breadcrumb = ({ lang, items }: Props) => {
   return (
     <nav aria-label='Breadcrumb' className='pb-2 text-sm italic'>
-      <ul className='flex flex-wrap items-center gap-1'>
+      <ul className='flex items-center gap-1'>
         {items.map((item, i) => (
           <Reveal
             as='li'
-            className='flex items-center'
+            className='line-clamp-1 inline-flex items-center truncate'
             delay={i * 0.1}
             direction='left'
             key={item.link}
             lang={lang}
           >
+            {i > 0 && <ChevronIcon className='h-4 w-4 rtl:rotate-180' />}
             {/* last item */}
             {i === items.length - 1 ? (
               <span aria-current='page' className='px-1 py-2'>
                 {item.title}
               </span>
             ) : (
-              <Link className='hover:text-primary-light px-1 py-2' href={`/${lang}/${item.link}`}>
+              <Link
+                className='hover:text-primary-light line-clamp-1 px-1 py-2'
+                href={`/${lang}/${item.link}`}
+              >
                 {item.title}
               </Link>
-            )}
-            {i < items.length - 1 && (
-              <Reveal as='span' delay={i * 0.15} direction='left' lang={lang}>
-                <ChevronIcon className='h-4 w-4' />
-              </Reveal>
             )}
           </Reveal>
         ))}

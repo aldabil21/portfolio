@@ -1,9 +1,10 @@
-import ThemeSwitcher from '@/components/common/theme-switcher';
 import Link from 'next/link';
 import LogoFace from './logo';
+import ThemeSwitcher from '@/components/common/theme-switcher';
+import LangSwitcher from '@/components/common/lang-switcher';
 
 type Props = {
-  lang: string;
+  lang: Languages;
 };
 
 const Header = ({ lang }: Props) => {
@@ -13,7 +14,10 @@ const Header = ({ lang }: Props) => {
         <LogoFace />
       </Link>
 
-      <ul>
+      <ul className='flex items-center gap-4'>
+        <li>
+          <LangSwitcher lang={lang} />
+        </li>
         <li>
           <ThemeSwitcher />
         </li>

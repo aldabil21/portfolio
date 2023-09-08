@@ -134,7 +134,12 @@ const Projects = ({ lang, title }: Props) => {
               </div>
 
               <div className='mx-auto max-w-xs py-8 text-center'>
-                <Button as={Link} className='w-full' href={`/projects/${p.slug}`} theme='secondary'>
+                <Button
+                  as={Link}
+                  className='w-full'
+                  href={`/${lang}/projects/${p.slug}`}
+                  theme='secondary'
+                >
                   {t('home:visit_project')}
                 </Button>
               </div>

@@ -8,7 +8,6 @@ type Props = {
 
 const HomeBannerComp = ({ lang }: Props) => {
   const { t } = useTranslation(lang, 'home');
-
   return (
     <HomeBanner
       aboutMe={t('home:about_me')}

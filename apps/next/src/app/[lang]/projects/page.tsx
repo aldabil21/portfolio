@@ -29,8 +29,8 @@ const page: NextPage<{ params: { slug: string } }> = async ({ params }) => {
       <Section className='flex flex-col items-center'>
         <Breadcrumb
           items={[
-            { title: t('home'), link: '/' },
-            { title: t('projects'), link: '/projects' },
+            { title: t('home'), link: '' },
+            { title: t('projects'), link: 'projects' },
           ]}
           lang={params.lang}
         />

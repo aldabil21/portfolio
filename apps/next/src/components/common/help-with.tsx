@@ -1,4 +1,3 @@
-import React from 'react';
 import { getTranslation } from '../../i18n';
 
 type Props = {

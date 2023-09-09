@@ -5,3 +5,4 @@ export * from './button';
 export * from './common';
 export * from './logo';
 export * from './icons';
+export * from './inputs';

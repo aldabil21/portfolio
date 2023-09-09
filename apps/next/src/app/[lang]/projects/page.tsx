@@ -37,9 +37,7 @@ const page: NextPage<{ params: { slug: string } }> = async ({ params }) => {
         />
         <h1>{t('projects')}</h1>
       </Section>
-
       <Projects lang={params.lang} title=' ' />
-
       <WhatCanIHelpYouWith lang={params.lang} />
     </>
   );

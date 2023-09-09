@@ -20,4 +20,5 @@ module.exports = {
   'import/no-named-as-default-member': 'off',
   'react/jsx-fragments': 'off',
   'import/order': 'off',
+  'no-nested-ternary': 'off',
 };

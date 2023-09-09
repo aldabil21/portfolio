@@ -4236,11 +4236,13 @@ __metadata:
     i18next-browser-languagedetector: ^7.0.2
     i18next-resources-to-backend: ^1.1.4
     next: ^13.4.18
+    node-mailer: ^0.1.1
     postcss: 8.4.24
     prettier: ^2.8.8
     prettier-plugin-tailwindcss: ^0.3.0
     react: 18.2.0
     react-dom: 18.2.0
+    react-hook-form: ^7.46.1
     react-i18next: ^12.3.1
     server-only: ^0.0.1
     tailwind-config: "workspace:*"
@@ -4274,10 +4276,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-mailer@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "node-mailer@npm:0.1.1"
+  dependencies:
+    nodemailer: ">= 0.1.15"
+  checksum: 5d13884fc26735b3c75b3ea4130880f57637f472569bf1e070a7646aa74e9d940a3fbc847558f5f14da8d6be379ac26dce1262257004b3bd73c1dd088c1ddc42
+  languageName: node
+  linkType: hard
+
 "node-releases@npm:^2.0.13":
   version: 2.0.13
   resolution: "node-releases@npm:2.0.13"
   checksum: 17ec8f315dba62710cae71a8dad3cd0288ba943d2ece43504b3b1aa8625bf138637798ab470b1d9035b0545996f63000a8a926e0f6d35d0996424f8b6d36dda3
+  languageName: node
+  linkType: hard
+
+"nodemailer@npm:>= 0.1.15":
+  version: 6.9.5
+  resolution: "nodemailer@npm:6.9.5"
+  checksum: e39282795e09f0685691b1511f74e2dc4703ba6ecd55d964c2f8a1b54591e5b284228c90cd6a203b498a5a1ea2610415306e8d7eda0b3cd9ebdcb210f05b2846
   languageName: node
   linkType: hard
 
@@ -4979,6 +4997,15 @@ __metadata:
   peerDependencies:
     react: ^18.2.0
   checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.46.1":
+  version: 7.46.1
+  resolution: "react-hook-form@npm:7.46.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 9c11ba454ce5b2a16e7499f2ca710e0c0cff227f39689b8e7985902f27f99bfc7a2c49f145ef228528764cf8286bf6101fc8a0f5094ce652eb31cab1684518d1
   languageName: node
   linkType: hard
 

@@ -4,7 +4,8 @@ import AboutMe from '@/components/home/about-me';
 import Cpu from '@/components/home/cpu';
 import Projects from '@/components/home/projects';
 import RadialBg from '@/components/ui/radial-bg';
-import WhatCanIHelpYouWith from '../../components/common/help-with';
+import WhatCanIHelpYouWith from '@/components/common/help-with';
+import Contact from '@/components/common/contact';
 
 const Page: NextPage = ({ params: { lang } }) => {
   return (
@@ -17,6 +18,7 @@ const Page: NextPage = ({ params: { lang } }) => {
       <Cpu />
       <Projects lang={lang} limit={5} />
       <WhatCanIHelpYouWith lang={lang} />
+      <Contact lang={lang} />
     </Fragment>
   );
 };

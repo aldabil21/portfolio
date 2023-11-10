@@ -25,6 +25,10 @@
       "dotEnv": [".env.development", ".env"],
       "cache": false,
       "persistent": true
+    },
+    "pre:commit": {
+      "dependsOn": ["lint", "format:write"],
+      "dotEnv": [".env.development", ".env"]
     }
   }
 }

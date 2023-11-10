@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   robots: 'noindex nofollow',
 };
 
-const NotFound: NextPage =  () => {
+const NotFound: NextPage = () => {
   // const { t } = await getTranslation(lang);
   return (
     <main>

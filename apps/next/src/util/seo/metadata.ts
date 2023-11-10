@@ -37,7 +37,6 @@ export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
       icon: '/favicon.ico',
     },
     manifest: '/manifest.json',
-    themeColor: '#000112',
     alternates: {
       languages: hrefLangAlternates(),
     },
@@ -54,7 +53,7 @@ export const projectMetadata = async (lang: Languages, project: Project): Promis
       siteName: t('seo.title'),
       title: `${title} | ${t('title')}`,
       type: 'website',
-      url: `/project/${project.slug}`,
+      url: `/${lang}/project/${project.slug}`,
       locale: lang,
       alternateLocale: languages,
       images: [

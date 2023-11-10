@@ -1,6 +1,3 @@
 User-agent: *
-disallow: /profile/
-disallow: /generated-payment/
-disallow: /payment-success
-disallow: /payment-failed
+
 # sitemap:

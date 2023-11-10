@@ -6,3 +6,5 @@ export * from './common';
 export * from './logo';
 export * from './icons';
 export * from './inputs';
+export * from './svgs';
+export * from './spinners';

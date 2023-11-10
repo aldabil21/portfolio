@@ -20,7 +20,8 @@
     "email": "Email",
     "message": "Message",
     "send": "Send",
-    "success": "Message sent successfully! I will get back to you as soon as possible."
+    "success": "Message sent successfully! I will get back to you as soon as possible.",
+    "failed": "Failed to send message! Please try again later."
   },
   "validation": {
     "invalid_mobile": "Invalid mobile",
@@ -41,6 +42,9 @@
     "password_must_contain_special": "Should contain at least one special character",
     "password_must_contain_number": "Should contain at least one number",
     "min_age": "Minimum age is {{age}}"
+  },
+  "errors": {
+    "unexpected_error": "Unexpected error"
   },
   "seo": {
     "title": "Senior Web Developer | Abdulraoof Aldabil",

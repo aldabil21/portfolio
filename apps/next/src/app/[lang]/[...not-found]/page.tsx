@@ -1,18 +1,7 @@
-import type { Metadata } from 'next';
-// import { getTranslation } from '@/i18n';
-
-export const metadata: Metadata = {
-  title: 'Error 404',
-  robots: 'noindex nofollow',
-};
+import { notFound } from 'next/navigation';
 
 const NotFound: NextPage = () => {
-  // const { t } = await getTranslation(lang);
-  return (
-    <main>
-      <h1>404</h1>
-    </main>
-  );
+  return notFound();
 };
 
 export default NotFound;

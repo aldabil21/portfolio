@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Header from './header';
 import Footer from './footer';
+import { StickySocials } from 'ui/common';
 
 type Props = {
   lang: Languages;
@@ -11,7 +12,10 @@ const Layout = ({ children, lang }: Props) => {
   return (
     <Fragment>
       <Header lang={lang} />
-      <main>{children}</main>
+      <main className='relative'>
+        {children}
+        <StickySocials />
+      </main>
       <Footer />
     </Fragment>
   );

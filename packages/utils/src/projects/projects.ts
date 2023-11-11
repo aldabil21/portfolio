@@ -10,6 +10,14 @@ export type Project = {
 
 export const projectsList: Project[] = [
   {
+    project: 'riyadhseason',
+    slug: 'riyadh-season-23-24',
+    description: [1, 2],
+    thumbnail: '/images/riyadhseason/thumbnail.png',
+    numberOfImages: 5,
+    live: 'https://riyadhseason.com',
+  },
+  {
     project: 'fcwc',
     slug: 'fifa-club-world-cup-23-24-season',
     description: [1, 2],

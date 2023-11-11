@@ -85,5 +85,14 @@
       "2": "The FIFA Club World Cup 2023/24 website introduces special channels booking. This feature allows fans to reserve tickets through exclusive channels, providing access to premium seating, hospitality packages, and other special offerings. By catering to diverse preferences, the platform ensures that every fan can find a ticket package tailored to their desires, making the tournament a memorable event for all attendees."
     },
     "technologies": "React,Next.js,TailwindCSS"
+  },
+  "riyadhseason": {
+    "title": "Riyadh Season 2023/24",
+    "subtitle": "",
+    "description": {
+      "1": "The Riyadh Season 2023/24 website serves as a digital hub, providing visitors with a seamless experience in exploring the diverse offerings of this extraordinary event. Navigating through the site, users will find a treasure trove of information, from an event calendar that outlines the schedule of festivities to detailed insights into the various zones that make up Riyadh Season.",
+      "2": "One of the website's key functionalities is its integration with webook.com, a trusted platform for convenient and secure ticket bookings. As visitors explore the myriad events and activities on offer, a direct link to webook.com simplifies the ticketing process, allowing users to secure their spots for the most coveted shows and experiences seamlessly."
+    },
+    "technologies": "React,Next.js,Contentful,CF Pages,TailwindCSS"
   }
 }

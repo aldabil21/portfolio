@@ -31,12 +31,12 @@ const SOLID: Record<ButtonTheme, string> = {
 };
 
 const OUTLINED: Record<ButtonTheme, string> = {
-  primary: `border-primary enabled:active:bg-primary-light/20 ring-primary text-primary 
-  enabled:shadow-[inset_0_0_10px_rgb(var(--color-primary))] enabled:hover:shadow-[inset_0_0_20px_0_rgb(var(--color-primary)/10)]
-  dark:disabled:border-gray-800 disabled:border-gray-400`,
+  primary: `border-primary active:bg-primary-light/20 ring-primary text-primary 
+  shadow-[inset_0_0_10px_rgb(var(--color-primary))] hover:shadow-[inset_0_0_20px_0_rgb(var(--color-primary)/10)]
+  dark:disabled:border-gray-800 disabled:border-gray-400 disabled:active:bg-inherit disabled:shadow-none disabled:hover:shadow-none`,
   secondary: `border-secondary hover:bg-secondary-light/5 active:bg-secondary-light/10 ring-secondary text-secondary
-  enabled:shadow-[inset_0_0_10px_rgb(var(--color-secondary))] enabled:hover:shadow-[inset_0_0_20px_0_rgb(var(--color-secondary)/10)]
-  dark:disabled:border-gray-800 disabled:border-gray-400`,
+  shadow-[inset_0_0_10px_rgb(var(--color-secondary))] hover:shadow-[inset_0_0_20px_0_rgb(var(--color-secondary)/10)]
+  dark:disabled:border-gray-800 disabled:border-gray-400 disabled:active:bg-inherit disabled:shadow-none disabled:hover:shadow-none`,
   tertiary: `border-tertiary hover:bg-tertiary-light/5 active:bg-tertiary-light/10 ring-tertiary text-tertiary-contrast
   shadow-[inset_0_0_10px_rgb(var(--color-tertiary))] hover:shadow-[inset_0_0_20px_0_rgb(var(--color-tertiary)/10)]`,
   error: 'border-error hover:bg-error-light/5 active:bg-error-light/10 ring-error text-error-dark',

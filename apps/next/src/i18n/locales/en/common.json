@@ -44,7 +44,8 @@
     "min_age": "Minimum age is {{age}}"
   },
   "errors": {
-    "unexpected_error": "Unexpected error"
+    "unexpected_error": "Unexpected error",
+    "404": "Opss, page not found!"
   },
   "seo": {
     "title": "Senior Web Developer | Abdulraoof Aldabil",

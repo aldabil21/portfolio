@@ -1,20 +1,11 @@
-'use client';
-import { useParams } from 'next/navigation';
-import Link from 'next/link';
-import { useTranslation } from '../../i18n/client';
+import { cookies } from 'next/headers';
+import Error404 from '@/components/errors/error-404';
 
-const NotFound: NextError = () => {
-  const params = useParams();
-  const lang = (params.lang || 'en') as Languages;
-  const { t } = useTranslation(lang, 'common');
+const NotFound = () => {
+  const cookie = cookies();
+  const lang = (cookie.get('lang')?.value || 'en-US') as Languages;
 
-  return (
-    <div>
-      <h2>{t('common:title')}</h2>
-      <p>Could not find requested resource</p>
-      <Link href='/'>Return Home</Link>
-    </div>
-  );
+  return <Error404 lang={lang} />;
 };
 
 export default NotFound;

@@ -68,6 +68,7 @@ const Projects = ({ lang, title, limit }: Props) => {
                   alt=''
                   className='relative z-20'
                   height={700}
+                  priority
                   src='/images/frame.png'
                   width={800}
                 />
@@ -84,6 +85,7 @@ const Projects = ({ lang, title, limit }: Props) => {
                       alt={t(`projects:${projectsList[inView].project}.title`)}
                       className='mx-auto h-full max-h-[80%] max-w-[94%] object-contain'
                       fill
+                      priority
                       sizes='(max-width: 1024px) 100vw, 800px'
                       src={projectsList[inView].thumbnail}
                     />

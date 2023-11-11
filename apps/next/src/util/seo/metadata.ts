@@ -28,7 +28,7 @@ export const homeMetadata = async (lang: Languages): Promise<Metadata> => {
       alternateLocale: languages,
       images: [
         {
-          url: '/images/default-cover.jpg',
+          url: `/images/default-cover-${lang}.jpg`,
           alt: t('common:seo.alt'),
         },
       ],

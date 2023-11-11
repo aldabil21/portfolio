@@ -31,7 +31,7 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div className='w-fulll absolute top-0 flex h-full justify-end px-2'>
+    <div className='absolute top-0 flex h-full justify-end px-2'>
       <motion.button
         aria-label={`Switch to ${otherTheme} theme`}
         className='relative w-12 origin-top'

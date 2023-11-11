@@ -9,7 +9,7 @@ type Props = {
 
 const Header = ({ lang }: Props) => {
   return (
-    <header className='container relative flex items-center justify-between p-4'>
+    <header className='container relative flex items-center justify-between overflow-hidden p-4'>
       <Link href={`/${lang}`}>
         <LogoFace />
       </Link>

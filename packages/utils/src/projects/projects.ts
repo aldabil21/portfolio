@@ -10,6 +10,14 @@ export type Project = {
 
 export const projectsList: Project[] = [
   {
+    project: 'fcwc',
+    slug: 'fifa-club-world-cup-23-24-season',
+    description: [1, 2],
+    thumbnail: '/images/fcwc/thumbnail.png',
+    numberOfImages: 9,
+    live: 'https://fifaclubwc2023.com',
+  },
+  {
     project: 'awwal',
     slug: 'alawwal-park-23-24-season',
     description: [1, 2],

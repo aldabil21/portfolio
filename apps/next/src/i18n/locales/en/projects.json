@@ -76,5 +76,14 @@
       "2": "With this website, Alnassr FC is committed to enhancing the fan experience, from the moment tickets are purchased to the final whistle of each match. The user-friendly interface, interactive seating maps, secure queue system, and exclusive offers demonstrate the club's dedication to creating unforgettable moments for their supporters."
     },
     "technologies": "React,Next.js,TailwindCSS"
+  },
+  "fcwc": {
+    "title": "FIFA Club World Cup 2023/24",
+    "subtitle": "",
+    "description": {
+      "1": "The FIFA Club World Cup 2023/24 website is not just a ticketing platform; it's a gateway to an unparalleled football experience. Through an interactive seating map, a secure queue system, special channels booking, and robust security measures, the platform aims to make the ticketing process as enjoyable as the tournament itself. As fans gear up for the thrilling clashes on the pitch, the website ensures that their journey from ticket purchase to stadium entry is seamless, secure, and tailored to their preferences.",
+      "2": "The FIFA Club World Cup 2023/24 website introduces special channels booking. This feature allows fans to reserve tickets through exclusive channels, providing access to premium seating, hospitality packages, and other special offerings. By catering to diverse preferences, the platform ensures that every fan can find a ticket package tailored to their desires, making the tournament a memorable event for all attendees."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
   }
 }

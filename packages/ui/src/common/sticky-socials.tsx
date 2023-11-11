@@ -1,6 +1,6 @@
 export const StickySocials = () => {
   return (
-    <div className='fixed bottom-0 left-2 hidden max-w-[80px] flex-col items-center justify-start space-y-4 md:flex'>
+    <div className='fixed bottom-0 rtl:right-8 ltr:left-8 hidden max-w-[80px] flex-col items-center justify-start space-y-4 md:flex'>
       <a
         className='block rounded-md p-1 transition hover:bg-black/10 dark:hover:bg-white/10'
         href='https://github.com/aldabil21'

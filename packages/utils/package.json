@@ -29,8 +29,8 @@
     "lint": "eslint src/**/* --ext .ts,.tsx,.js,.jsx"
   },
   "dependencies": {
-    "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*"
+    "eslint-config-custom": "*",
+    "tsconfig": "*"
   },
   "devDependencies": {
     "eslint": "^8.48.0",

@@ -38,24 +38,24 @@
   "peerDependencies": {
     "framer-motion": "^10.x.x",
     "react": "^18.2.0",
-    "utils": "workspace:*"
+    "utils": "*"
   },
   "devDependencies": {
     "@types/react": "^18.2.5",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.48.0",
-    "eslint-config-custom": "workspace:*",
+    "eslint-config-custom": "*",
     "lint-staged": "^15.0.2",
     "postcss": "^8.4.20",
     "prettier-plugin-tailwindcss": "^0.5.3",
     "react": "^18.2.0",
-    "tailwind-config": "workspace:*",
+    "tailwind-config": "*",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "^3.3.3",
-    "tsconfig": "workspace:*",
+    "tsconfig": "*",
     "tsup": "^6.1.3",
     "typescript": "^5.1.6",
-    "utils": "workspace:*"
+    "utils": "*"
   },
   "lint-staged": {
     "**/*.{ts,js,tsx,jsx}": [

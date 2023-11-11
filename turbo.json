@@ -1,0 +1,33 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.development"],
+  "pipeline": {
+    "start": {
+      "dependsOn": ["^start"],
+      "dotEnv": [".env.development", ".env"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "dotEnv": [".env.development", ".env"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "format": {
+      "dependsOn": ["^format"]
+    },
+    "format:write": {
+      "dependsOn": ["^format:write"]
+    },
+    "dev": {
+      "dotEnv": [".env.development", ".env"],
+      "cache": false,
+      "persistent": true
+    },
+    "pre:commit": {
+      "dependsOn": ["lint", "format:write"],
+      "dotEnv": [".env.development", ".env"]
+    }
+  }
+}

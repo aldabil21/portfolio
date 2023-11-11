@@ -1,0 +1,80 @@
+{
+  "visit_project": "Visit Project",
+  "project_not_live": "Project is down :(",
+  "neom": {
+    "title": "Neom The Line Exhibition",
+    "subtitle": "",
+    "description": {
+      "1": "Step into the world of web development as we embark on a journey to create an unparalleled ticketing system tailored specifically for the Neom The Line Exhibition. This innovative platform will seamlessly integrate React, Next.js, Tailwind CSS, and cutting-edge time slot management, offering a unique and immersive experience",
+      "2": "the advanced time slot management system. Attendees will seamlessly explore available time slots for the Neom The Line Exhibition's captivating showcases and events. Our meticulous backend architecture will ensure real-time updates on time slot availability, enabling users to secure their spots with confidence and convenience."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
+  },
+  "wtcr": {
+    "title": "Saudi MotorSports WTCR Race",
+    "subtitle": "",
+    "description": {
+      "1": "The Saudi MotorSports WTCR Race website emerges as a one-stop destination for securing tickets to the adrenaline-pumping WTCR event. With a user-friendly interface, the website ensures a seamless and hassle-free booking process for motorsports enthusiasts from around the globe. Users can effortlessly navigate through the various ticket categories, from general admission to VIP packages, tailored to meet the diverse preferences of fans.",
+      "2": "The collaborative effort between the Saudi Automobile & Motorcycle Federation and the website developers demonstrates the convergence of sporting excellence and cutting-edge technology. This endeavor showcases how advancements in web development and design can enhance the overall spectator experience. By merging the excitement of motorsports with the convenience of online ticketing and the engagement of interactive seating selection, the Saudi MotorSports WTCR Race website epitomizes the future of sporting event management.",
+      "3": "The launch of the Saudi MotorSports WTCR Race website marks an exciting chapter in the history of motorsports, where the fusion of sport and technology creates an unparalleled experience for fans. As racing enthusiasts eagerly prepare for the highly anticipated WTCR event, they can now navigate the exhilarating world of motorsports with a few clicks, secure their desired tickets, and choose their prime viewing spots within the circuit. With the Saudi Automobile & Motorcycle Federation leading the way, the future of motorsports has never looked more promising, dynamic, and interactive."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
+  },
+  "diriyah": {
+    "title": "Diriyah Season 2023",
+    "subtitle": "",
+    "description": {
+      "1": "The Diriyah Season 2023 website offers a digital doorway to a realm of culture, entertainment, and heritage. The annual Diriyah Season, hosted in the historic city of Diriyah, Saudi Arabia, is a convergence of art, sport, music, and entertainment that captivates a global audience. The website serves as an all-encompassing guide, directing visitors to a multitude of experiences that await them.",
+      "2": "The website is a masterpiece of design, effortlessly blending modern aesthetics with traditional elements. Upon entering the site, visitors are immediately immersed in a visual journey, with captivating imagery that encapsulates the essence of Diriyah's ambiance.",
+      "3": "A key objective of the website is to showcase the diverse array of events that constitute the Diriyah Season 2023. Interactive event calendars, accompanied by comprehensive descriptions and compelling visuals, allow visitors to delve deep into the world of heart-pounding motorsports, enthralling concerts, cultural exhibitions, and more. Whether attendees seek the adrenaline rush of motorsports like the CORE Diriyah E-Prix 2023, the excitement of the SUPERCOPA DE ESPAÑA 2023, or even the spectacle of The Truth match featuring Jake Paul vs. Tommy Fury, the website acts as a compass guiding them to unforgettable experiences."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
+  },
+  "saudicup": {
+    "title": "The Saudi Cup 2023 Season",
+    "subtitle": "",
+    "description": {
+      "1": "The Saudi Cup, one of the most prestigious events in the horse racing world, has consistently captured the attention of enthusiasts and spectators from around the globe. In its 2023 season, the organizers embarked on an ambitious journey to create an immersive and user-friendly online ticketing platform that would not only streamline the ticket booking process but also enhance the overall event experience.",
+      "2": "Gone are the days of long queues and time-consuming ticket purchases. The ticketing platform offered a streamlined booking process, allowing users to select their desired seating options, view interactive seating charts, and complete their transactions seamlessly. By integrating secure payment gateways, users could rest assured that their personal and financial information remained protected.",
+      "3": "Understanding that each attendee's preferences are unique, the ticketing platform incorporated features for personalized experiences. Attendees could customize their packages, selecting from a range of options such as VIP access, hospitality suites, and exclusive event merchandise. This personalization not only added value but also created a sense of exclusivity for attendees."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
+  },
+  "sagp": {
+    "title": "Formula 1 SAGP 2023",
+    "subtitle": "",
+    "description": {
+      "1": "The Formula 1 SAGP 2023 ticketing website isn't just about securing seats; it's about offering a comprehensive and exclusive experience for fans. The website boasts an array of perks that enhance the overall package for ticket holders. From priority access to autograph sessions and meet-and-greets with drivers to behind-the-scenes glimpses into the inner workings of a Formula 1 team, the perks cater to both die-hard fans and those new to the world of racing.",
+      "2": "The parking pass feature allows users to select from various parking areas, view proximity to their chosen seating sections, and even explore recommended routes to reach the circuit. By streamlining the parking process, the website aims to minimize pre-event worries, letting fans focus solely on the excitement that awaits them."
+    },
+    "technologies": "React,Next.js,TailwindCSS,SVG Animations"
+  },
+  "misk": {
+    "title": "Misk Hub",
+    "subtitle": "",
+    "description": {
+      "1": "Misk Hub offers a comprehensive set of tools that empower event organizers to create, manage, and analyze their events effortlessly. From crafting event details and managing guest lists to designing event badges and overseeing event approvals, Misk Hub is a one-stop platform designed to simplify event management.",
+      "2": "One of its standout features is the ability to customize event details, such as dates, times, and locations, ensuring that each event aligns perfectly with your unique vision. This level of customization extends to badge creation, where you can design professional badges that reflect your brand identity.",
+      "3": "In essence, Misk Hub is not just a website; it's your strategic partner in event organization. Whether you're planning a small-scale meeting or a large-scale conference, Misk Hub's user-friendly interface, robust features, and data-driven insights will elevate your event management to new heights. Say goodbye to the stress of event planning and embrace the future with Misk Hub. Your next successful event is just a click away!"
+    },
+    "technologies": "React,Next.js,Radix UI,TailwindCSS"
+  },
+  "afcon": {
+    "title": "Africa Cup of Nations - Morocco 2023",
+    "subtitle": "",
+    "description": {
+      "1": "One of the standout features of the AFCON 2023 website is the interactive seating map, which has revolutionized how fans select their seats. Gone are the days of selecting tickets blindly. Now, fans can visually explore the stadium layout, view available seats in real-time, and choose their preferred spots. This feature not only enhances the overall user experience but also allows fans to make informed decisions based on their preferences, ensuring that they enjoy the tournament from their ideal vantage point.",
+      "2": "Anticipating the high demand for AFCON 2023 tickets, the website introduces a secure queue system for ticket purchasing. This innovative approach prevents website crashes due to excessive traffic and ensures a fair and orderly ticket distribution process. Fans enter the virtual queue and patiently await their turn, knowing that the system is designed to accommodate the massive influx of users without compromising security or performance."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
+  },
+  "awwal": {
+    "title": "Alawwal Park - Alnassr FC season 2023/24",
+    "subtitle": "",
+    "description": {
+      "1": "The Alawwal Park - Alnassr FC Season 2023/24 website caters to all fans, whether they're committed season pass holders or casual attendees. In addition to early bird offers, the website provides convenient access to season ticket sales for those who want to catch every game. For those interested in attending specific matches, single-match tickets are also available, ensuring that everyone can be part of the excitement.",
+      "2": "With this website, Alnassr FC is committed to enhancing the fan experience, from the moment tickets are purchased to the final whistle of each match. The user-friendly interface, interactive seating maps, secure queue system, and exclusive offers demonstrate the club's dedication to creating unforgettable moments for their supporters."
+    },
+    "technologies": "React,Next.js,TailwindCSS"
+  }
+}

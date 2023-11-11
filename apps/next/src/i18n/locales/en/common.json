@@ -1,0 +1,55 @@
+{
+  "title": "Abdulraoof Aldabil",
+  "en": "English",
+  "ar": "العربية",
+  "home": "Home",
+  "projects": "Projects",
+  "all_projects": "All Projects",
+  "help": {
+    "title": "What I can help you with?",
+    "technical": "Technical Expertise",
+    "technical_desc": "Help in choosing and implementing the right technology for your project, optimizing perfrmance, scalability, and maintainability. As a senior web developer with rich experience in ecommerce, social media, and web applications, I can help you make your ideas become true!",
+    "project": "Project Coordination & Planning",
+    "project_desc": "collaborate to understand project requirements abd creating a roadmap for front-end development. Estimates of the time and resources required for front-end development. Anticipate potential project risks and devise contingency plans to keep front-end development on track",
+    "continuous": "Continuous Improvement",
+    "continuous_desc": "Analyze website data to identify opportunities for continuous front-end improvement, enhancing the website's relevance and effectiveness. Stay up-to-date with the latest front-end development trends and technologies. Provide training and guidance to the internal front-end teams"
+  },
+  "contact": {
+    "title": "Say Hi!",
+    "name": "Your Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "success": "Message sent successfully! I will get back to you as soon as possible.",
+    "failed": "Failed to send message! Please try again later."
+  },
+  "validation": {
+    "invalid_mobile": "Invalid mobile",
+    "invalid_value": "Invalid value",
+    "only_numbers": "Only numbers",
+    "invalid_email": "Invalid Email",
+    "required": "Required",
+    "min_number": "Should be greater than {{min}}",
+    "max_number": "Should be smaller than {{max}}",
+    "min_length": "Minimum {{min}}",
+    "max_length": "Maximum {{max}}",
+    "select_team": "Please select your favorite team",
+    "emails_not_match": "Emails do not match",
+    "passwords_not_match": "Passwords do not match",
+    "invalid_password": "Invalid password",
+    "password_length": "Should be at least {{length}} characters",
+    "password_must_contain_letter": "Should contain at least one letter",
+    "password_must_contain_special": "Should contain at least one special character",
+    "password_must_contain_number": "Should contain at least one number",
+    "min_age": "Minimum age is {{age}}"
+  },
+  "errors": {
+    "unexpected_error": "Unexpected error",
+    "404": "Opss, page not found!"
+  },
+  "seo": {
+    "title": "Senior Web Developer | Abdulraoof Aldabil",
+    "description": "I'm a Senior web developer, Javascript developer, and fullstack web developer, I can help you make your ideas become true!",
+    "keywords": "web developer, web, developer, javascript, react, nextjs, electron"
+  }
+}

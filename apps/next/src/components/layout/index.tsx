@@ -12,7 +12,7 @@ const Layout = ({ children, lang }: Props) => {
   return (
     <Fragment>
       <Header lang={lang} />
-      <main className='relative'>
+      <main>
         {children}
         <StickySocials />
       </main>

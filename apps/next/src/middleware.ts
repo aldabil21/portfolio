@@ -42,9 +42,11 @@ export function middleware(req: NextRequest) {
     if (req.cookies.has(cookieName)) {
       locale = acceptLanguage.get(req.cookies.get(cookieName)?.value);
     }
-    if (!locale) {
-      locale = acceptLanguage.get(req.headers.get('Accept-Language'));
-    }
+
+    // if (!locale) {
+    //   locale = acceptLanguage.get(req.headers.get('Accept-Language'));
+    // }
+
     if (!locale) {
       locale = fallbackLng;
     }

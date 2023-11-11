@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
+import Script from 'next/script';
 import { dir } from 'i18next';
 import { globalJsonLd } from '@/util/seo/json-ld';
 import Layout from '@/components/layout';
@@ -7,7 +8,6 @@ import { languages } from '../../i18n/settings';
 import { homeMetadata } from '../../util/seo/metadata';
 import { cairoFont } from '../../util/fonts';
 import '../../styles/globals.css';
-import Script from 'next/script';
 
 export const generateMetadata = ({ params }: NextPageProps): Promise<Metadata> => {
   return homeMetadata(params.lang);

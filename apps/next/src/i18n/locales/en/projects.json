@@ -94,5 +94,39 @@
       "2": "One of the website's key functionalities is its integration with webook.com, a trusted platform for convenient and secure ticket bookings. As visitors explore the myriad events and activities on offer, a direct link to webook.com simplifies the ticketing process, allowing users to secure their spots for the most coveted shows and experiences seamlessly."
     },
     "technologies": "React,Next.js,Contentful,CF Pages,TailwindCSS"
+  },
+  "webook": {
+    "title": "webook.com",
+    "subtitle": "Elevating Event Experiences in Saudi Arabia",
+    "description": {
+      "1": "webook.com stands out as a comprehensive solution, catering to a diverse range of events and activities. Whether you're planning to attend concerts, festivals, sports events, or cultural gatherings, webook.com provides a one-stop destination for all your ticketing needs. The platform's user-friendly interface ensures a smooth and hassle-free experience, making it a preferred choice for event-goers across Saudi Arabia.",
+      "2": "Riyadh Season 2023/24 has chosen webook.com as its official ticketing system, a testament to the platform's reliability and efficiency. This partnership not only solidifies webook.com's position as a leader in the industry but also showcases its capability to handle large-scale events with precision and professionalism.",
+      "3": "webook.com goes beyond traditional ticketing platforms by incorporating advanced technologies into its system. The platform boasts a powerful search and filtration engine, allowing users to easily navigate through a plethora of events and find the ones that align with their interests. Additionally, an AI-based recommendation system takes the user experience to the next level by suggesting activities based on individual preferences, creating a personalized and enjoyable ticketing journey."
+    },
+    "technologies": "React,Next.js,Contentful,TailwindCSS"
+  },
+  "react-scheduler": {
+    "title": "Open Source React Scheduler",
+    "subtitle": "A Material UI React scheduler component",
+    "description": {
+      "1": "Simplified Scheduler componenet for React, easy to use & customize, more light/simplified than other react scheduler libs out there. I created this for one of my projects that used calendar/event system, I check some of the most famous components out there and thought that It doesn't fit my use case and I needed my own implementations to fit more perfectly in the current project"
+    },
+    "technologies": "Javascript,Typescript,React"
+  },
+  "easy-webpush": {
+    "title": "Easy Web Push",
+    "subtitle": "Push Notification & PWA for OpenCart 3.x",
+    "description": {
+      "1": "First fully owned, no limitation, no API requests push notification extension for OpenCart e-commerce platform. This is actualy made due to a request from a friend, I'm not a PHP guy, but hey, anything can be done!."
+    },
+    "technologies": "Javascript,Push Notifications,PWA,PHP,OpenCart,MySQL"
+  },
+  "european-honey": {
+    "title": "European Honey",
+    "subtitle": "",
+    "description": {
+      "1": "European Honey folks wanted somthing special, unique to thier needs, this fully featured ~2 seconds load-time E-commerce store have a lot of features that will help them succeed in their launch, including, complex taxonomy system (categories, filters, tags, brands, attributes, features), highly flexible options with all teaks needed (input, selects, files, numbers, texts.. each has own sub-options, visibility conditions, pricing conditions, dynamic pricing, quantity tracking), group based prices (retail, wholesale you name it), specials, coupons, points, notificatins, manegment, order tracking, scheduling, shipping, payment gateway, and much more features. Not to mention the SEO aspect of work, ls+json rich snippets, with little bit of marketing work, they gonna rock it, hope they do."
+    },
+    "technologies": "Fullstack,E-commerce,Node,MySQL,Redis,VPS,Nextjs"
   }
 }

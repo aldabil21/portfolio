@@ -1,18 +1,3 @@
-import type { AnimationProps } from 'framer-motion';
-import { motion } from 'framer-motion';
-
-const MOTION_LINE_CONFIG: AnimationProps = {
-  initial: { strokeDashoffset: 100 },
-  animate: { strokeDashoffset: 0 },
-  transition: {
-    repeat: Infinity,
-    duration: 3,
-    repeatType: 'loop',
-    ease: 'linear',
-    type: 'keyframes',
-  },
-};
-
 export const Cpu = () => {
   return (
     <section className='text-primary relative mx-auto max-w-xl px-4 py-12 drop-shadow-2xl'>
@@ -39,75 +24,75 @@ export const Cpu = () => {
             y='246.5'
           />
         </g>
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M422 243.5V189C422 188.448 422.448 188 423 188H630C630.552 188 631 187.552 631 187V82.5'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M422 497.5V552C422 552.552 422.448 553 423 553H630C630.552 553 631 553.448 631 554V658.5'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M316 245.5V187.158C316 186.606 315.552 186.158 315 186.158H101C100.448 186.158 100 185.711 100 185.158V96'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M316 495.5V553.842C316 554.394 315.552 554.842 315 554.842H101C100.448 554.842 100 555.289 100 555.842V645'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M386 246.5V187.5C386 186.948 385.552 186.5 385 186.5H366C365.448 186.5 365 186.052 365 185.5V98'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M243 353L175.717 353C175.165 353 174.717 352.552 174.717 352L174.717 278C174.717 277.448 174.269 277 173.717 277L88.5 277'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M494 353L561.283 353C561.835 353 562.283 352.552 562.283 352L562.283 278C562.283 277.448 562.731 277 563.283 277L622 277'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M243 423L175.938 423C175.386 423 174.938 423.448 174.938 424L174.938 462C174.938 462.552 174.49 463 173.938 463L86 463'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M494 423L561.062 423C561.614 423 562.062 423.448 562.062 424L562.062 462C562.062 462.552 562.51 463 563.062 463L651 463'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
-        <motion.path
+        <path
+          className='animate-cpu-path'
           d='M350 495V554C350 554.552 350.448 555 351 555H370C370.552 555 371 555.448 371 556V658'
           stroke='#5F5F5F'
           strokeDasharray='10 10'
           strokeLinecap='round'
-          {...MOTION_LINE_CONFIG}
         />
         <circle cx='505.5' cy='206.5' r='4' stroke='#5F5F5F' />
         <path

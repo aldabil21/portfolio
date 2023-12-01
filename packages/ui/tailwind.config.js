@@ -16,6 +16,7 @@ module.exports = {
         'glasses-up': 'glasses-up 0.5s cubic-bezier(0.5,0.5,0.2,1) forwards',
         'glasses-up-rtl': 'glasses-up-rtl 0.5s cubic-bezier(0.5,0.5,0.2,1) forwards',
         'card-gradient': 'card-gradient 8s linear infinite',
+        'cpu-path': 'cpu-path 3.5s linear infinite',
       },
       backgroundImage: {
         'dashed-line-vertical':
@@ -63,6 +64,14 @@ module.exports = {
           '100%': {
             height: '100%',
             opacity: 0.3,
+          },
+        },
+        'cpu-path': {
+          from: {
+            strokeDashoffset: 0,
+          },
+          to: {
+            strokeDashoffset: -100,
           },
         },
         'glasses-up': {

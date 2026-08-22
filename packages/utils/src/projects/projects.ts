@@ -18,6 +18,14 @@ export const projectsList: Project[] = [
     live: 'https://webook.com',
   },
   {
+    project: 'cmscloud',
+    slug: 'cms-cloud',
+    description: [1, 2, 3],
+    thumbnail: '/images/cmscloud/thumbnail.png',
+    numberOfImages: 4,
+    live: 'https://cmscloud.ai',
+  },
+  {
     project: 'ahlan',
     slug: 'ahlan',
     description: [1, 2, 3],

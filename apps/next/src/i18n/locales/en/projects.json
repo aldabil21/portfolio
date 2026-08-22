@@ -93,7 +93,7 @@
       "1": "The Riyadh Season 2023/24 website serves as a digital hub, providing visitors with a seamless experience in exploring the diverse offerings of this extraordinary event. Navigating through the site, users will find a treasure trove of information, from an event calendar that outlines the schedule of festivities to detailed insights into the various zones that make up Riyadh Season.",
       "2": "One of the website's key functionalities is its integration with webook.com, a trusted platform for convenient and secure ticket bookings. As visitors explore the myriad events and activities on offer, a direct link to webook.com simplifies the ticketing process, allowing users to secure their spots for the most coveted shows and experiences seamlessly."
     },
-    "technologies": "React,Next.js,Contentful,CF Pages,TailwindCSS"
+    "technologies": "React,Next.js,GraphQL,CF Pages,TailwindCSS"
   },
   "webook": {
     "title": "webook.com",
@@ -103,7 +103,17 @@
       "2": "Riyadh Season 2023/24 has chosen webook.com as its official ticketing system, a testament to the platform's reliability and efficiency. This partnership not only solidifies webook.com's position as a leader in the industry but also showcases its capability to handle large-scale events with precision and professionalism.",
       "3": "webook.com goes beyond traditional ticketing platforms by incorporating advanced technologies into its system. The platform boasts a powerful search and filtration engine, allowing users to easily navigate through a plethora of events and find the ones that align with their interests. Additionally, an AI-based recommendation system takes the user experience to the next level by suggesting activities based on individual preferences, creating a personalized and enjoyable ticketing journey."
     },
-    "technologies": "React,Next.js,Contentful,TailwindCSS"
+    "technologies": "React,Next.js,GraphQL,TailwindCSS"
+  },
+  "cmscloud": {
+    "title": "CMS Cloud",
+    "subtitle": "Headless CMS, unboxed",
+    "description": {
+      "1": "CMS Cloud is a self-hosted, API-first headless CMS that I architected and built end to end — the admin dashboard, the APIs behind it, the delivery layer and the infrastructure it runs on. Its content APIs follow established headless-CMS conventions, which keeps migrating off an existing platform straightforward. The dashboard covers the full editorial surface: a content-type builder, entries with scheduling and per-locale translation, a media library, configurable search, spaces and environments with aliases, roles and permissions, API keys and CMA tokens, an audit log and schema migrations.",
+      "2": "Underneath, it splits into independent services — an admin API, a read-only GraphQL delivery API, and a REST management API for programmatic writes — backed by PostgreSQL, Redis, and Cloudflare Workers that cache GraphQL at the edge and transform images on the fly. Three-layer caching with stale-while-revalidate and real-time invalidation keeps delivery fast, and every space gets its own performance view: request volume, cache hit ratio and p50/p95/p99 latency broken down per query. It runs in production today behind [webook.com](https://webook.com), [ahlan.sa](https://ahlan.sa) and [scbraga.pt](https://scbraga.pt).",
+      "3": "Because data ownership is rarely negotiable, CMS Cloud is deployed as a multi-zone, multi-region service: each customer’s content can be pinned to the region their regulator requires, which is what lets one platform satisfy GDPR in Europe and PDPL in Saudi Arabia — and any other residency regime a client needs. Search runs dual-layer: a self-hosted Meilisearch cluster handles lexical matching while OpenAI embeddings stored in Postgres through pgvector carry semantic meaning, so the same query returns sharper results."
+    },
+    "technologies": "Fastify,GraphQL,PostgreSQL,Redis,Meilisearch,Cloudflare Workers,React"
   },
   "ahlan": {
     "title": "Ahlan - AFC Asian Cup Saudi Arabia 2027",

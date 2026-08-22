@@ -8,6 +8,7 @@ import Button from '@/components/button';
 import Image from 'next/image';
 import { projectMetadata } from '../../../../util/seo/metadata';
 import { Breadcrumb } from '../../../../components/common/breadcrumb';
+import { RichText } from '../../../../components/common/rich-text';
 
 const getProject = (slug: string) => {
   const project = projectsList.find((p) => p.slug === slug);
@@ -65,7 +66,7 @@ const page: NextPage<{ params: { slug: string } }> = async ({ params }) => {
           </Button>
           {project.description.map((d) => (
             <p className='text-lg' key={d}>
-              {t(`projects:${project.project}.description.${d}`)}
+              <RichText>{t(`projects:${project.project}.description.${d}`)}</RichText>
             </p>
           ))}
 

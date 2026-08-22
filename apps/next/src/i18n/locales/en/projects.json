@@ -105,6 +105,16 @@
     },
     "technologies": "React,Next.js,Contentful,TailwindCSS"
   },
+  "alakhutah": {
+    "title": "Ala Khutah",
+    "subtitle": "Every Step Revives You",
+    "description": {
+      "1": "Ala Khutah (“In His Footsteps”) is a large-scale heritage destination in Saudi Arabia that retraces the historical route of the Prophet Muhammad’s Hijrah from Makkah to Madinah. I built the visitor-facing booking platform behind it — the single gateway through which guests plan and pay for the entire journey across a 470 km path, 41 historical sites and 7 accommodation stations over a six-month operating season.",
+      "2": "The platform brings four very different booking models under one cart: destination entry tickets, time-slotted guided experiences, hotel rooms with per-child age and group-capacity rules, and transportation along a multi-stop desert route. A standard coach comes with every journey, and guests can upgrade any single leg — an immersive bus with onboard Hijrah storytelling, an off-road bus, or a private car — while entry-ticket prerequisites are resolved automatically so no one reaches a site without the access it requires.",
+      "3": "Built as a React 19 single-page app on Vite, it is fully bilingual in Arabic and English with complete RTL support, and shares a design system and domain packages with the wider webook platform through a Turborepo monorepo. Checkout supports Apple Pay, cards and Tabby instalments alongside promo codes and rewards, with confirmed bookings flowing into the companion Ala Khutah mobile app."
+    },
+    "technologies": "React,Vite,TailwindCSS"
+  },
   "react-scheduler": {
     "title": "Open Source React Scheduler",
     "subtitle": "A Material UI React scheduler component",

@@ -18,6 +18,14 @@ export const projectsList: Project[] = [
     live: 'https://webook.com',
   },
   {
+    project: 'alakhutah',
+    slug: 'ala-khutah',
+    description: [1, 2, 3],
+    thumbnail: '/images/alakhutah/thumbnail.png',
+    numberOfImages: 2,
+    live: 'https://alakhutah.com',
+  },
+  {
     project: 'riyadhseason',
     slug: 'riyadh-season-23-24',
     description: [1, 2],

@@ -4,8 +4,8 @@
 node_modules
 .pnp
 .pnp.js
-.yarn
-yarn.lock
+.yarn/*
+!.yarn/releases
 
 # testing
 coverage

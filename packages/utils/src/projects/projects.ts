@@ -18,6 +18,14 @@ export const projectsList: Project[] = [
     live: 'https://webook.com',
   },
   {
+    project: 'ahlan',
+    slug: 'ahlan',
+    description: [1, 2, 3],
+    thumbnail: '/images/ahlan/thumbnail.png',
+    numberOfImages: 2,
+    live: 'https://ahlan.sa',
+  },
+  {
     project: 'alakhutah',
     slug: 'ala-khutah',
     description: [1, 2, 3],

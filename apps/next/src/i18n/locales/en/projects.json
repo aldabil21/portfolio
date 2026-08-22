@@ -105,6 +105,16 @@
     },
     "technologies": "React,Next.js,Contentful,TailwindCSS"
   },
+  "ahlan": {
+    "title": "Ahlan - AFC Asian Cup Saudi Arabia 2027",
+    "subtitle": "The official fan destination for AFC tournaments in Saudi Arabia",
+    "description": {
+      "1": "Ahlan is the official platform for the AFC Asian Cup Saudi Arabia 2027™ and the tournaments leading up to it, from the AFC U17 Asian Cup to the Champions League Elite finals. I built the fan-facing site: a single destination where supporters follow every tournament, browse fixtures and news, and buy tickets — general admission, hospitality and accessibility seating alike — choosing their exact place on an interactive stadium seat chart.",
+      "2": "Because one codebase serves many tournaments, nothing about a competition’s identity is hardcoded. Each tournament’s palette, branding and page composition are authored in the CMS and delivered over GraphQL, so a new competition launches in its own colours — the deep green of the Asian Cup, the purple and gold of the Champions League Elite finals — without a single code change.",
+      "3": "The platform also covers the trip around the match: visa guidance, flight search and hotel booking are built in, alongside an official resale marketplace where fans can list and buy seats safely rather than through unauthorised channels. It runs as a React 19 single-page app on Vite, fully bilingual in Arabic and English with RTL support, and shares its ticketing, payment and design-system packages with the wider webook platform."
+    },
+    "technologies": "React,Vite,GraphQL,TailwindCSS"
+  },
   "alakhutah": {
     "title": "Ala Khutah",
     "subtitle": "Every Step Revives You",

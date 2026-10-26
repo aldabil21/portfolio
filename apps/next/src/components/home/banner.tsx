@@ -16,8 +16,11 @@ const HomeBannerComp = ({ lang }: Props) => {
       name={t('home:abdulraoof')}
       projects={t('home:projects')}
       recentProjects={t('home:recent_projects')}
-      senior={t('home:senior')}
-      titles={[t('home:web_developer'), t('home:full_stack'), t('home:js_developer')]}
+      titles={[
+        t('home:engineering_lead'),
+        t('home:solution_architect'),
+        t('home:cms_cloud_creator'),
+      ]}
       years={t('home:years')}
     />
   );

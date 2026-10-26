@@ -48,8 +48,8 @@
     "404": "Opss, page not found!"
   },
   "seo": {
-    "title": "Platform & Full-Stack Engineer | Abdulraoof Aldabil",
-    "description": "Platform and full-stack engineer in Riyadh. Creator of CMS Cloud, a self-hosted headless CMS serving three production brands. I build with Fastify, GraphQL, PostgreSQL, Redis, React and Next.js.",
-    "keywords": "platform engineer, full-stack engineer, fullstack developer, software engineer, typescript, react, nextjs, node, fastify, graphql, postgresql, redis, headless cms, turborepo, saudi arabia, riyadh"
+    "title": "Engineering Lead & Solution Architect | Abdulraoof Aldabil",
+    "description": "Engineering lead and solution architect in Riyadh. I lead a 10+ engineer team at webook.com, created CMS Cloud, and am a Google Cloud Professional Cloud Architect.",
+    "keywords": "engineering lead, solution architect, cloud architect, google cloud professional cloud architect, gcp, team lead, platform engineering, full-stack engineer, software engineer, react, nextjs, node, fastify, postgresql, headless cms, saudi arabia, riyadh"
   }
 }

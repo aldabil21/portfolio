@@ -10,7 +10,6 @@ type Props = {
   titles: string[];
   hello: string;
   name: string;
-  senior: string;
   years: string;
   projects: string;
   aboutMe: string;
@@ -22,7 +21,6 @@ export const HomeBanner = ({
   titles,
   hello,
   name,
-  senior,
   years,
   projects,
   aboutMe,
@@ -61,12 +59,17 @@ export const HomeBanner = ({
           >
             {name}
           </Reveal>
-          <Reveal as='p' className='relative text-2xl' delay={0.2} direction='bottom' lang={lang}>
-            {senior}
+          <Reveal
+            as='p'
+            className='relative h-8 text-2xl'
+            delay={0.2}
+            direction='bottom'
+            lang={lang}
+          >
             <AnimatePresence>
               <motion.span
                 animate={{ top: 0, opacity: 1 }}
-                className='absolute px-1.5'
+                className='absolute whitespace-nowrap'
                 exit={{ top: -15, opacity: 0 }}
                 initial={{ top: 15, opacity: 0 }}
                 key={title}

@@ -1,16 +1,15 @@
 {
   "hello": "Hello! I'm",
   "abdulraoof": "Abdulraoof Aldabil",
-  "senior": "Senior",
-  "web_developer": "Web Developer",
-  "js_developer": "JavaScript Developer",
-  "full_stack": "Full Stack Developer",
+  "engineering_lead": "Engineering Lead",
+  "solution_architect": "Solution Architect",
+  "cms_cloud_creator": "Creator of CMS Cloud",
   "years": "Years",
   "projects": "Projects",
   "about_me": "About Me",
   "recent_projects": "Recent Projects",
-  "about_me_1": "A Senior web developer based in Riyadh, Saudi Arabia. I have developed many types of front-ends, such as E-commerce platforms, ticketing platforms, as well as desktop applications.",
-  "about_me_2": "I'm passionate about cutting-edge, pixel-perfect, beautiful interfaces and intuitively implemented UIs.",
+  "about_me_1": "Engineering lead and solution architect based in Riyadh. I lead a frontend team of 10+ engineers at webook.com and own the shared platform behind 24+ production apps — ticketing for the AFC Asian Cup 2027, Riyadh Season, the F1 Saudi Arabian GP and more.",
+  "about_me_2": "I'm also the creator and architect of CMS Cloud, a headless CMS running multi-region on Google Cloud, and a Google Cloud Certified Professional Cloud Architect.",
   "download_cv": "Download CV",
   "visit_project": "Visit Project"
 }
